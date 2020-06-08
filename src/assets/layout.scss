@@ -1,6 +1,9 @@
 body {
   font-family: Roboto, Arial, sans-serif;
 }
+main {
+  min-height: calc(100vh - 315px);
+}
 .navbar {
   &-start, &-end {
     display: flex;
@@ -9,8 +12,9 @@ body {
     }
   }
   &-burger {
-    margin-left: 0;
     color: $primary;
+    margin-left: 16px;
+    width: 24px;
     &:hover, &.is-active {
       background-color: transparent;
     }
@@ -67,6 +71,24 @@ body {
   &:not(:last-child) {
     margin-bottom: $pdLarge + $pdReg;
   }
+  &-row{
+    position: relative;
+  }
+}
+.footer {
+  display: block;
+  padding-top: $pdLarge;
+  background-color: #F1F3F4;
+  &-logo {
+    cursor: pointer;
+  }
+  &-links {
+    color: $grey;
+    font-size: $fontSizeNormal;
+    .link {
+      text-decoration: underline;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
   .navbar {
@@ -89,7 +111,11 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      //height: 100%;
     }
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-search {
+    display: none;
   }
 }

@@ -3,3 +3,9 @@
     border-bottom: $borderBase;
   }
 }
+.is-absolute {
+  &-right {
+    position: absolute;
+    right: 0;
+  }
+}
