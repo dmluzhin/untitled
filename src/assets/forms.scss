@@ -1,0 +1,19 @@
+input, textarea {
+  font-family: Roboto, Arial, sans-serif;
+}
+.search {
+  &-input {
+    border: transparent;
+    font-size: $fontSizeReg;
+    border-radius: $radius-rounded;
+    background-color: rgba($greyLighter, .5);
+    outline: none;
+    height: 40px;
+    padding-left: 48px;
+    padding-right: 8px;
+    min-width: 232px;
+    &:focus {
+      border-color: $greyLighter;
+    }
+  }
+}
