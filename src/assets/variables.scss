@@ -13,7 +13,7 @@ $black:                   #000000;
 $fontBlack:               rgba($black, .75);
 $fontBlackHover:          rgba($black, 1);
 $elementHover:            #fafafa;
-
+$borderColor:             #E5E5E5;
 /*additional colors*/
 $darkBlue:                #31456A;
 $lightGreen:              #2ED47A;
@@ -21,7 +21,7 @@ $lightOrange:             #FFA14A;
 
 /*BORDERS & RADIUS*/
 $radius-rounded:          4px;
-
+$borderBase:              1px solid #E5E5E5;
 /*SHADOWS*/
 $shadowPrimary:           0px 4px 10px rgba($primary, 0.24);
 $shadowPrimaryDark:       0px 4px 10px rgba($primaryDark, 0.24);

@@ -1,0 +1,45 @@
+h1.title {
+  line-height: 36px;
+  &.has-border-bottom {
+    padding-bottom: $pdReg !important;
+  }
+}
+
+.anchor-title {
+  display: block;
+  position: relative;
+  margin-bottom: $pdLarge !important;
+  &:before {
+    content: '#';
+    position: absolute;
+    right:calc(100% + 1rem);
+    top: 1px;
+    color: $primaryLight;
+    cursor: pointer;
+  }
+  &:hover:before {
+    color: $primary;
+  }
+}
+a {
+  &.link {
+    color: $primary;
+    &:hover {
+      color: $primaryLight;
+    }
+  }
+}
+
+.footnote {
+  background-color: $greyLight;
+  font-size: .875em;
+  font-weight: 400;
+  padding: .25em .5em .25em;
+  cursor: pointer;
+  border-radius: $radius-rounded;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: .875em;
+  }
+}
