@@ -4,7 +4,7 @@ input, textarea {
 .search {
   &-input {
     border: transparent;
-    font-size: $fontSizeReg;
+    font-size: $fontSizeNormal;
     border-radius: $radius-rounded;
     background-color: rgba($greyLighter, .5);
     outline: none;

@@ -1,6 +1,6 @@
 <nav class="navbar has-shadow" id="navbar">
   <div class="container">
-    <div class="navbar-brand">
+    <div class="navbar-brand" routerLink="/">
       <div class="navbar-burger burger">
         <span></span>
         <span></span>
@@ -10,23 +10,35 @@
         <img src="../../../assets/img/svg/polog-logo.svg"/>
       </div>
     </div>
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <div class="navbar-item navbar-search">
-          <div class="search-container">
-            <input class="search-input" type="text" placeholder="Поиск" />
-          </div>
-        </div>
-      </div>
-      <div class="navbar-end">
-        <a href="" class="navbar-item">Опросы</a>
-        <a href="" class="navbar-item">Результаты</a>
-        <a href="" class="navbar-item">Новости</a>
-        <a href="" class="navbar-item">О проекте</a>
-        <div class="navbar-item navbar-auth">
-          <button class="button is-small is-info is-outlined">Войти</button>
+
+    <div class="navbar-start">
+      <div class="navbar-item navbar-search">
+        <div class="search-container">
+          <input class="search-input" type="text" placeholder="Поиск"/>
         </div>
       </div>
     </div>
+
+    <div class="navbar-end is-nav">
+      <div class="navbar-menu">
+        <div class="navbar-item navbar-route"
+             routerLink="elements"
+             routerLinkActive="active">Элементы</div>
+        <div class="navbar-item navbar-route"
+             routerLink="components"
+             routerLinkActive="active">Компоненты</div>
+        <div class="navbar-item navbar-route"
+           routerLink="typography"
+           routerLinkActive="active">Типографика</div>
+        <div class="navbar-item navbar-route"
+             routerLink="pages"
+             routerLinkActive="active">Страницы</div>
+      </div>
+      <div class="navbar-item navbar-auth">
+        <button class="button is-small is-info is-outlined">Войти</button>
+      </div>
+    </div>
+
   </div>
+
 </nav>

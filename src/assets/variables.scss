@@ -9,6 +9,10 @@ $greyLight:               #E3EDF7;
 $greyLighter:             #E8E8E8;
 $greyDark:                rgba($grey, .8);
 $white:                   #ffffff;
+$black:                   #000000;
+$fontBlack:               rgba($black, .75);
+$fontBlackHover:          rgba($black, 1);
+$elementHover:            #fafafa;
 
 /*additional colors*/
 $darkBlue:                #31456A;
@@ -27,5 +31,11 @@ $shadowGrey:              0px 4px 10px rgba($grey, 0.25);
 $shadowGreyDark:          0px 4px 10px rgba($greyDark, .25);
 
 /*fixed font sizes*/
-
 $fontSizeReg:             16px;
+$fontSizeNormal:          14px;
+
+/*paddings & margins*/
+$pdBase:                 4px;
+$pdReg:                  $pdBase*3;
+$pdSmall:                $pdBase*2;
+$pdLarge:                $pdBase * 6;
