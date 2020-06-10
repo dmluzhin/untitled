@@ -1,0 +1,15 @@
+.footer {
+  display: block;
+  padding-top: $pdLarge;
+  background-color: #F1F3F4;
+  &-logo {
+    cursor: pointer;
+  }
+  &-links {
+    color: $grey;
+    font-size: $fontSizeNormal;
+    .link {
+      text-decoration: underline;
+    }
+  }
+}

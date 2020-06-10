@@ -11,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ElementsComponent } from './views/elements/elements.component';
 import { ComponentsComponent } from './views/components/components.component';
 import { PagesComponent } from './views/pages/pages.component';
+import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PagesComponent } from './views/pages/pages.component';
     HomeComponent,
     ElementsComponent,
     ComponentsComponent,
-    PagesComponent
+    PagesComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,

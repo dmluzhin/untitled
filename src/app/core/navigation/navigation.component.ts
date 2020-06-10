@@ -9,6 +9,17 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
+  navbarClasses = {
+    'active': false,
+  };
+
+  toggleNavbar() {
+    this.navbarClasses.active = !this.navbarClasses.active;
+  }
+  closeNavbar() {
+    this.navbarClasses.active = !this.navbarClasses.active;
+  }
+
   ngOnInit() {
   }
 

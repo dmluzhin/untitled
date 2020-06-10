@@ -1,0 +1,9 @@
+.box {
+  &.is-route {
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 1em 1.5em -0.175em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    }
+  }
+}

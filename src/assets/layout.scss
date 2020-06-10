@@ -4,59 +4,6 @@ body {
 main {
   min-height: calc(100vh - 315px);
 }
-.navbar {
-  &-start, &-end {
-    display: flex;
-    &.is-nav {
-      align-items: center;
-    }
-  }
-  &-burger {
-    color: $primary;
-    margin-left: 16px;
-    width: 24px;
-    &:hover, &.is-active {
-      background-color: transparent;
-    }
-    span {
-      height: 2px;
-    }
-  }
-  &-brand {
-    cursor: pointer;
-    img {
-      width: 138px;
-      height: auto;
-      max-height: none;
-    }
-  }
-  &-item {
-    &.navbar-route {
-      margin-left: $pdSmall;
-      padding: 0 $pdLarge;
-      height: 40px;
-      border-radius: $radius-rounded;
-      color: $fontBlack;
-      font-size: $fontSizeNormal;
-      cursor: pointer;
-      outline: none;
-      &:hover {
-        color: $fontBlackHover;
-        background-color: $elementHover;
-      }
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: $pdSmall;
-      }
-      &.active {
-        background-color: $greyLight;
-        color: $primary;
-      }
-    }
-  }
-}
 
 .wrapper {
   width: 100%;
@@ -75,25 +22,7 @@ main {
     position: relative;
   }
 }
-.footer {
-  display: block;
-  padding-top: $pdLarge;
-  background-color: #F1F3F4;
-  &-logo {
-    cursor: pointer;
-  }
-  &-links {
-    color: $grey;
-    font-size: $fontSizeNormal;
-    .link {
-      text-decoration: underline;
-    }
-  }
-}
 @media screen and (min-width: 1024px) {
-  .navbar {
-    height: 64px;
-  }
   .wrapper {
     .container {
       padding: 0;
@@ -105,17 +34,6 @@ main {
     max-width: 1152px;
   }
 }
-@media screen and (max-width: 1023px) {
-  .navbar {
-    & > .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-}
-@media screen and (max-width: 600px) {
-  .navbar-search {
-    display: none;
-  }
-}
+
+@import "layout/navigation";
+@import "layout/footer";

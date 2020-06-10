@@ -8,6 +8,9 @@ import { ComponentsComponent } from './views/components/components.component';
 import { TypographyComponent } from './views/typography/typography.component';
 import { PagesComponent } from './views/pages/pages.component';
 
+/*SUBVIEWS*/
+import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -30,6 +33,10 @@ const routes: Routes = [
     path: 'pages',
     component: PagesComponent
   },
+  {
+    path: 'elements/buttons',
+    component: ButtonsComponent
+  }
 ];
 
 @NgModule({

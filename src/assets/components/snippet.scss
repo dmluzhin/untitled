@@ -1,0 +1,23 @@
+.snippet {
+  align-items: stretch;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  display: flex;
+  justify-content: center;
+  border: 2px solid $borderColor;
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  &-preview {
+    padding: $pdLarge;
+    flex: 1 1 auto;
+  }
+  &-code {
+    width: 50%;
+    align-items: stretch;
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $greyLighter;
+  }
+}
