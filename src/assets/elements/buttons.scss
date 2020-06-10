@@ -1,0 +1,277 @@
+.buttons {
+  &.is-flexible {
+    display: flex;
+    .button {
+      flex: 1 1 auto;
+    }
+  }
+  &.has-addons {
+    .button.selected {
+      background-color: $greyHover;
+      color: #657380;
+    }
+  }
+}
+.button {
+  background-color: $greyLight;
+  color: $grey;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: $fontSizeNormal;
+  box-shadow: $shadowSecondary;
+  padding: $pdReg $pdMed;
+  border: none;
+  outline: none;
+  &:hover {
+    background-color: $greyHover;
+  }
+  &:active {
+    background-color: $greyLight;
+  }
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:disabled, &.disabled {
+    background-color: $greyLight;
+    opacity: .6;
+    box-shadow: none;
+    &:hover {
+      cursor: default;
+      background-color: $greyLight;
+      opacity: .6;
+      box-shadow: none;
+      color: $grey;
+    }
+  }
+  &.is-primary {
+    background-color: $primary;
+    box-shadow: $shadowPrimary;
+    &:hover {
+      background-color: $primaryLight;
+      box-shadow: $shadowPrimary;
+    }
+    &:active {
+      background-color: darken($primaryLight, 3%);
+      box-shadow: 0px 2px 6px rgba(9, 142, 223, 0.3);
+    }
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: $shadowPrimary !important;
+    }
+    &:disabled, &.disabled {
+      background-color: $greyLight;
+      opacity: .6;
+      box-shadow: none;
+      color: $grey;
+      &:hover {
+        cursor: default;
+        background-color: $greyLight;
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+      }
+    }
+  }
+  &.is-green {
+    background-color: $lightGreen;
+    box-shadow: $shadowGreen;
+    color: $white;
+    &:hover {
+      background-color: $lightGreenHover;
+      box-shadow: $shadowGreenHover;
+    }
+    &:active {
+      background-color: darken($lightGreenHover, 3%);
+      box-shadow: $shadowGreen;
+    }
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: $shadowGreen !important;
+    }
+    &:disabled, &.disabled {
+      background-color: $greyLight;
+      opacity: .6;
+      box-shadow: none;
+      color: $grey;
+      &:hover {
+        cursor: default;
+        background-color: $greyLight;
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+      }
+    }
+  }
+  &.is-orange {
+    background-color: $lightOrange;
+    color: $white;
+    box-shadow: $shadowOrange;
+    &:hover {
+      background-color: $lightOrangeHover;
+      box-shadow: $shadowOrangeHover;
+    }
+    &:active {
+      background-color: darken($lightOrangeHover, 3%);
+      box-shadow: $shadowOrange;
+    }
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: $shadowOrange !important;
+    }
+    &:disabled, &.disabled {
+      background-color: $greyLight;
+      opacity: .6;
+      box-shadow: none;
+      color: $grey;
+      &:hover {
+        cursor: default;
+        background-color: $greyLight;
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+      }
+    }
+  }
+
+  /*доп-размер is-tiny*/
+  &.is-tiny {
+    border-radius: 2px;
+    font-size: .625rem;
+  }
+
+  /*контурные кнопки*/
+  &.is-outlined {
+    background-color: $white;
+    border: $borderLightGrey;
+    box-shadow: none;
+    color: $grey;
+    &:hover, &:active, &:focus, &:disabled, &.disabled {
+      background-color: $white !important;
+      box-shadow: none !important;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $grey;
+      color: $grey;
+    }&:disabled, &.disabled {
+       opacity: .6;
+       box-shadow: none;
+       color: $grey;
+       border-color: $greyLight;
+       &:hover {
+         border-color: $greyLight;
+         cursor: default;
+         background-color: $white;
+         opacity: .6;
+         box-shadow: none;
+         color: $grey;
+       }
+     }
+
+    &.is-primary, &.is-orange, &.is-green {
+      box-shadow: none;
+      &:hover, &:active, &:focus, &:disabled, &.disabled {
+        background-color: $white !important;
+        box-shadow: none !important;
+        border-width: 2px;
+        border-style: solid;
+      }
+    }
+    &.is-primary {
+      color: $primary;
+      border-color: $primary;
+      &:hover {
+        border-color: $primaryLight;
+        color: $primaryLight;
+      }
+      &:active {
+        border-color: darken($primaryLight, 3%);
+        color: darken($primaryLight, 3%);
+      }
+      &:focus {
+        color: $primary;
+        border-color: $primary;
+      }
+      &:disabled, &.disabled {
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+        border-color: $greyLight;
+        &:hover {
+          border-color: $greyLight;
+          cursor: default;
+          background-color: $white;
+          opacity: .6;
+          box-shadow: none;
+          color: $grey;
+        }
+      }
+    }
+    &.is-green {
+      color: $lightGreen;
+      border-color: $lightGreen;
+      &:hover {
+        border-color: $lightGreenHover;
+        color: $lightGreenHover;
+      }
+      &:active {
+        border-color: darken($lightGreenHover, 3%);
+        color: darken($lightGreenHover, 3%);
+      }
+      &:focus {
+        color: $lightGreen;
+        border-color: $lightGreen;
+      }
+      &:disabled, &.disabled {
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+        border-color: $greyLight;
+        &:hover {
+          border-color: $greyLight;
+          cursor: default;
+          background-color: $white;
+          opacity: .6;
+          box-shadow: none;
+          color: $grey;
+        }
+      }
+    }
+    &.is-orange {
+      color: $lightOrange;
+      border-color: $lightOrange;
+      &:hover {
+        border-color: $lightOrangeHover;
+        color: $lightOrangeHover;
+      }
+      &:active {
+        border-color: darken($lightOrangeHover, 3%);
+        color: darken($lightOrangeHover, 3%);
+      }
+      &:focus {
+        color: $lightOrange;
+        border-color: $lightOrange;
+      }
+      &:disabled, &.disabled {
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+        border-color: $greyLight;
+        &:hover {
+          border-color: $greyLight;
+          cursor: default;
+          background-color: $white;
+          opacity: .6;
+          box-shadow: none;
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+input.button {
+  line-height: 1;
+}

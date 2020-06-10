@@ -4,8 +4,10 @@
 $primary:                 #1A76DC;
 $primaryDark:             #004FA8;
 $primaryLight:            #3CB9EE;
+$primaryActive:           #186ECD;
 $grey:                    #8C9FB1;
 $greyLight:               #E3EDF7;
+$greyHover:               #D3DCE6;
 $greyLighter:             #E8E8E8;
 $greyDark:                rgba($grey, .8);
 $white:                   #ffffff;
@@ -14,15 +16,20 @@ $fontBlack:               rgba($black, .75);
 $fontBlackHover:          rgba($black, 1);
 $elementHover:            #fafafa;
 $borderColor:             #E5E5E5;
+
 /*additional colors*/
 $darkBlue:                #31456A;
 $lightGreen:              #2ED47A;
+$lightGreenHover:         #12E675;
 $green:                   #0EB75C;
 $lightOrange:             #FFA14A;
+$lightOrangeHover:        #FFB672;
 
 /*BORDERS & RADIUS*/
 $radius-rounded:          4px;
 $borderBase:              1px solid #E5E5E5;
+$borderLightGrey:         2px solid $greyLight;
+
 /*SHADOWS*/
 $shadowPrimary:           0px 4px 10px rgba($primary, 0.24);
 $shadowPrimaryDark:       0px 4px 10px rgba($primaryDark, 0.24);
@@ -30,6 +37,11 @@ $shadowPrimaryLight:      0px 4px 10px rgba($primaryLight, 0.24);
 $shadowGreyLight:         0px 4px 10px rgba($greyLight, 0.25);
 $shadowGrey:              0px 4px 10px rgba($grey, 0.25);
 $shadowGreyDark:          0px 4px 10px rgba($greyDark, .25);
+$shadowSecondary:         0px 4px 10px rgba(227, 237, 247, 0.25);
+$shadowGreen:             0px 4px 10px rgba(14, 183, 92, 0.25);
+$shadowGreenHover:        0px 8px 16px rgba(14, 183, 92, 0.2);
+$shadowOrange:            0px 4px 10px rgba(255, 161, 74, 0.25);
+$shadowOrangeHover:       0px 4px 10px rgba(255, 161, 74, 0.2);
 
 /*fixed font sizes*/
 $fontSizeTiny:            10px;

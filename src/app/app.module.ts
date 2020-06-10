@@ -12,6 +12,11 @@ import { ElementsComponent } from './views/elements/elements.component';
 import { ComponentsComponent } from './views/components/components.component';
 import { PagesComponent } from './views/pages/pages.component';
 import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
+import {
+  HighlightModule,
+  HIGHLIGHT_OPTIONS,
+  HighlightOptions
+} from "ngx-highlightjs";
 
 @NgModule({
   declarations: [
@@ -28,9 +33,17 @@ import { ButtonsComponent } from './views/elements/containers/buttons/buttons.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        lineNumbers: true
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

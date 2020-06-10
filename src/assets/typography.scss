@@ -14,6 +14,12 @@ p {
 
   }
 }
+pre {
+  background-color: #fafafa;
+}
+.hljs {
+  background: transparent;
+}
 .title {
   &:not(.is-spaced)+.subtitle {
     margin-top: -.75rem;

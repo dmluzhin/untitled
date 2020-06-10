@@ -1,14 +1,18 @@
 .snippet {
+  position: relative;
   align-items: stretch;
   border-radius: 6px;
-  border-top-left-radius: 0;
   display: flex;
   justify-content: center;
   border: 2px solid $borderColor;
+  overflow: hidden;
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
   &-preview {
+    //display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: $pdLarge;
     flex: 1 1 auto;
   }

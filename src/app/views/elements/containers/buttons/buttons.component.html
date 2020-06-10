@@ -1,22 +1,232 @@
-<main class="typo wrapper">
-  <div class="typo-container container">
+<main class="buttons wrapper">
+  <div class="buttons-container container">
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="elements/buttons#types" class="link">Типы кнопок</a></li>
+        <li class="list-item"><a href="elements/buttons#colors" class="link">Цвета</a></li>
+        <li class="list-item"><a href="elements/buttons#sizes" class="link">Размеры</a></li>
+        <li class="list-item"><a href="elements/buttons#flexible" class="link">Резиновые кнопки</a></li>
+        <li class="list-item"><a href="elements/buttons#outline" class="link">Контурные кнопки</a></li>
+        <li class="list-item"><a href="elements/buttons#tumblers" class="link">Тумблеры</a></li>
+      </ul>
+    </div>
     <div class="content">
       <h1 class="title">Кнопки</h1>
       <div class="subtitle">Классические кнопки, разных цветов, размеров и состояний</div>
       <div class="snippet">
         <div class="snippet-preview">
-          <button class="button">Кнопка</button>
+          <div class="buttons">
+            <button class="button">Кнопка</button>
+          </div>
         </div>
         <div class="snippet-code">
             <pre>
-              <code class="language-html" data-lang="html">
-                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
-              </code>
+              <code [highlight]="simpleButton"></code>
             </pre>
+        </div>
+      </div>
+      <a class="title is-4 is-spaced anchor-title" id="types">Типы кнопок</a>
+      <p class="paragraph">Существует три типа кнопок:</p>
+      <ul>
+        <li><code>&lt;button&gt;</code> - стандартная кнопка</li>
+        <li><code>&lt;a&gt;</code> - анкорная ссылка</li>
+        <li><code>&lt;input type="submit"&gt;</code> - инпут для форм и прочего</li>
+      </ul>
+      <p class="paragraph">Все типы кнопок выглядят одинаково при наличии класса <code><span class="hljs-symbol">.button</span></code></p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button">Кнопка</button>
+            <a class="button">Анкорная ссылка</a>
+            <input class="button" value="Отправить" type="submit">
+          </div>
+        </div>
+        <div class="snippet-code">
+            <pre>
+              <code [highlight]="buttonTypes"></code>
+            </pre>
+        </div>
+      </div>
+
+      <!--Цвета-->
+      <a class="title is-4 is-spaced anchor-title" id="colors">Цвета</a>
+      <p class="paragraph">Кнопки доступны в разных цветах. Цвета определяются переменными в файлe <code><span class="hljs-keyword">variables.scss</span></code></p>
+      <p class="paragraph">Чтобы изменить цвет стандартной кнопки необходимо добавить класс-модификатор, например класс <code><span class="hljs-symbol">.is-primary</span></code> добавит кнопке брендовый цвет</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button is-primary">Основная кнопка</button>
+            <button class="button is-green">Подтвердить</button>
+            <button class="button is-orange">Предупреждение</button>
+            <button class="button">Вторичная кнопка</button>
+            <button class="button" disabled>Неакивная кнопка</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+            <pre>
+              <code [highlight]="buttonColors"></code>
+            </pre>
+        </div>
+      </div>
+
+      <!--Размеры-->
+      <a class="title is-4 is-spaced anchor-title" id="sizes">Размеры</a>
+      <p class="paragraph">Кнопки могут быть в <strong>четырех разных размерах</strong>:</p>
+      <ul>
+        <li>Крошечная</li>
+        <li>Маленькая</li>
+        <li>Стандартная</li>
+        <li>Средняя</li>
+        <li>Большая</li>
+      </ul>
+      <p class="paragraph">Чтобы изменить размер кнопки, необходимо добавить один из четырех модификаторов:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.is-tiny</span></code> - делает кнопку <strong>крошечного размера</strong></li>
+        <li><code><span class="hljs-symbol">.is-small</span></code> - делает кнопку <strong>маленького размера</strong></li>
+        <li><code><span class="hljs-symbol">.is-medium</span></code> - делает кнопку <strong>среднего размра</strong></li>
+        <li><code><span class="hljs-symbol">.is-large</span></code> - делает кнопку <strong>большого ращмера</strong></li>
+      </ul>
+      <p class="paragraph">Чтобы оставить кнопку стандартного размера, просто не добавляйте никаких классов</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button is-primary is-tiny">Крошечная</button>
+            <button class="button is-primary is-small">Маленькая</button>
+            <button class="button is-primary">Стандартная</button>
+            <button class="button is-primary is-medium">Средняя</button>
+            <button class="button is-primary is-large">Большая</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+            <pre>
+              <code [highlight]="buttonSizes"></code>
+            </pre>
+        </div>
+      </div>
+      <p class="paragraph">Размеры кнопок справедливы для всех <a href="elements/buttons#types" class="link" >типов кнопок</a>.</p>
+      <p class="paragraph">Вы так же можете применить нужный размер сразу для <strong>нескольких кнопок одновременно</strong>. Для этого добавьте один из приведенных ниже классов к контейнеру
+        <code>&lt;button class="<span class="hljs-symbol">buttons</span>"&gt;</code>:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.are-small</span></code> -  делает кнопки <strong>маленького</strong> размера</li>
+        <li><code><span class="hljs-symbol">.are-medium</span></code> - делает кнопки <strong>среднего</strong> размера</li>
+        <li><code><span class="hljs-symbol">.are-large</span></code> - делает кнопки <strong>больгого</strong> размера</li>
+      </ul>
+      <div class="snippet ">
+        <div class="snippet-preview">
+          <div class="buttons are-medium">
+            <button class="button is-green">Все</button>
+            <button class="button is-green">Кнопки</button>
+            <button class="button is-green">Среднего</button>
+            <button class="button is-green">Размера</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code [highlight]="buttonAllSizes"></code>
+          </pre>
+        </div>
+      </div>
+      <p class="paragraph">Однако, если это необходимо, вы можете изменить размер одной или несколких кнопок из набора добавить один из уже классов к самой кнопке:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.is-tiny</span></code> - делает кнопку <strong>крошечного размера</strong></li>
+        <li><code><span class="hljs-symbol">.is-small</span></code> - делает кнопку <strong>маленького размера</strong></li>
+        <li><code><span class="hljs-symbol">.is-medium</span></code> - делает кнопку <strong>среднего размра</strong></li>
+        <li><code><span class="hljs-symbol">.is-large</span></code> - делает кнопку <strong>большого ращмера</strong></li>
+      </ul>
+      <div class="snippet ">
+        <div class="snippet-preview">
+          <div class="buttons are-small">
+            <button class="button is-orange">Все</button>
+            <button class="button is-orange is-medium">Кроме меня</button>
+            <button class="button is-orange">Кнопки</button>
+            <button class="button is-orange">Маленького</button>
+            <button class="button is-orange">Размера</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code [highlight]="buttonAllSizes"></code>
+          </pre>
+        </div>
+      </div>
+
+      <!--Полноразмерные кнопки-->
+      <a class="title is-4 is-spaced anchor-title" id="flexible">Резиновые кнопки</a>
+      <p class="paragraph">Кнопку любого размера можно сделать <strong>полноразмерной</strong>, или <strong>резиновой</strong>. Чтобы использовать полноразмерную кнопку, нужно добавить к кнопке класс <code><span class="hljs-symbol">.is-fullwidth</span></code>. Кнопка займет все доступное пространство родительского блока и будет тянуться в зависимости от его размера.</p>
+      <div class="snippet ">
+        <div class="snippet-preview">
+          <div style="width: 300px;">
+            <button class="button is-primary is-tiny is-fullwidth">Крошечная</button>
+            <button class="button is-primary is-small is-fullwidth">Маленькая</button>
+            <button class="button is-primary is-fullwidth">Стандартная</button>
+            <button class="button is-primary is-medium is-fullwidth">Средняя</button>
+            <button class="button is-primary is-large is-fullwidth">Большая</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code [highlight]="buttonFlex"></code>
+          </pre>
+        </div>
+      </div>
+      <p class="paragraph">Для использования <strong>резиновых</strong> кнопок, нужно к родительскому контейнеру <code>&lt;button class="<span class="hljs-symbol">buttons</span>"&gt;</code> добавить класс <code><span class="hljs-symbol">.is-flexible</span></code>:</p>
+      <div class="snippet ">
+        <div class="snippet-preview">
+          <div class="buttons is-flexible" style="width: 100%">
+            <button class="button">33%</button>
+            <button class="button">33%</button>
+            <button class="button">33%</button>
+          </div>
+          <div class="buttons is-flexible" style="width: 100%">
+            <button class="button">50%</button>
+            <button class="button">50%</button>
+          </div>
+          <div class="buttons is-flexible" style="width: 100%">
+            <button class="button">100%</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code [highlight]="buttonFlexible"></code>
+          </pre>
+        </div>
+      </div>
+
+      <!--Стили кнопок-->
+      <a class="title is-4 is-spaced anchor-title" id="outline">Контурные кнопки</a>
+      <p class="paragraph">Привычные кнопки, но с белым фоном, без тени и с обводкой. Эффект достикается через класс-модификатор <code><span class="hljs-symbol">.is-outline</span></code>:</p>
+      <div class="snippet ">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button is-primary is-outlined">Контурная</button>
+            <button class="button is-green is-outlined">Контурная</button>
+            <button class="button is-orange is-outlined">Контурная</button>
+            <button class="button is-outlined">Контурная</button>
+            <button class="button is-outlined" disabled>Контурная</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code [highlight]="buttonOutlned"></code>
+          </pre>
+        </div>
+      </div>
+
+      <!--Тумблеры-->
+      <a class="title is-4 is-spaced anchor-title" id="tumblers">Тумблеры</a>
+      <p class="subtitle is-spaced">Тумблеры - те же кнопки, но могут иметь два состояния отключена (блекло синий) и вкючена (зеленый) по принципу чекбокса</p>
+      <h5 class="title is-5 is-spaced">Множественный тумблер</h5>
+      <p class="paragraph">С помощью класса <code><span class="hljs-symbol">.selected</span></code> и одного из приведенных ниже классов можно переключать активное состояние одной из кнопок.</p>
+      <p class="paragraph"><strong></strong></p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons has-addons">
+            <button class="button is-primary selected">Да</button>
+            <button class="button">Возможно</button>
+            <button class="button">Нет</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </main>
-
-figure
