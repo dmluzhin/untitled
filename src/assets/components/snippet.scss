@@ -17,11 +17,28 @@
     flex: 1 1 auto;
   }
   &-code {
+    position: relative;
     width: 50%;
     align-items: stretch;
     border-radius: 0 6px 6px 0;
     display: flex;
     flex-direction: column;
-    background-color: $greyLighter;
+    background-color: #fafafa;
   }
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  &-item button {
+    @extend .button;
+    cursor: pointer;
+  }
+}
+.code-toolbar {
+  //overflow: auto;
+}
+pre[class*="language-"] {
+  background-color: transparent !important;
 }

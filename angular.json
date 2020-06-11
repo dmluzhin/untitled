@@ -30,9 +30,12 @@
             "styles": [
               "node_modules/bulma/css/bulma.min.css",
               "node_modules/bulma-helpers/css/bulma-helpers.min.css",
+              "node_modules/prismjs/themes/prism.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js"
+            ]
           },
           "configurations": {
             "production": {

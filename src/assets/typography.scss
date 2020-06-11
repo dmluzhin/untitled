@@ -86,6 +86,18 @@ a {
     background-color: transparent !important;
   }
 }
+.language-html {
+  font-size: 12px !important;
+}
+.token.tag {
+  background-color: transparent !important;
+  text-transform: inherit;
+  font-size: 13px !important;
+  padding: 0 !important;
+}
+.token.attr-name {
+  padding-left: 8px;
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: .875em;
