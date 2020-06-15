@@ -10,6 +10,7 @@ import { PagesComponent } from './views/pages/pages.component';
 
 /*SUBVIEWS*/
 import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
+import { FormsComponent } from './views/elements/containers/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: 'elements/buttons',
     component: ButtonsComponent
+  }
+  ,
+  {
+    path: 'elements/forms',
+    component: FormsComponent
   }
 ];
 

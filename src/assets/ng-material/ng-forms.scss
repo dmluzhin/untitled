@@ -1,0 +1,94 @@
+$matInputLabelColor: rgba(49, 69, 106, 0.5);
+
+.mat-form-field {
+  font-size: $fontSizeNormal;
+  &-infix {
+    border-top-width: 24px;
+  }
+  &-appearance-legacy {
+    .mat-form-field {
+      &-underline {
+        background-color: $matInputBorder;
+      }
+      &-infix {
+        padding: .6em 0;
+      }
+      &-label {
+        color: $matInputLabelColor;
+        font-weight: 500;
+      }
+    }
+  }
+  &.mat-focused {
+    .mat-form-field {
+      &-label {
+        color: $primary;
+      }
+      &-ripple {
+        background-color: $primary;
+      }
+    }
+  }
+}
+.mat-select-panel {
+  padding: $pdReg !important;
+  .mat-option {
+    margin-bottom: $pdBase;
+    height: 32px !important;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .mat-pseudo-checkbox {
+    display: none;
+  }
+}
+.mat-option {
+  border-radius: $radius-rounded;
+  padding: 0 $pdSmall;
+  &.mat-active {
+    background-color: $greyLight;
+    color: $primary;
+  }
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $primary;
+  background-color: $greyLight;
+}
+.mat-checkbox {
+  &-checked {
+    &.mat-accent {
+      .mat-checkbox-background {
+        background-color: $primary;
+      }
+    }
+  }
+  &-frame {
+    border-color: $grey;
+  }
+  .mat-ripple {
+    display: none;
+  }
+}
+
+.mat-radio {
+  &-outer-circle {
+    border-color: $grey;
+  }
+  &-ripple {
+    display: none;
+  }
+  &-button {
+    &.mat-accent {
+      .mat-radio-inner-circle {
+        background-color: $primary;
+      }
+      &.mat-radio-checked {
+        .mat-radio-outer-circle {
+          border-color: $primary;
+        }
+      }
+    }
+  }
+}

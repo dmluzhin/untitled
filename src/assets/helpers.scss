@@ -2,6 +2,9 @@
   &-bottom {
     border-bottom: $borderBase;
   }
+  &-top {
+    border-top: $borderBase;
+  }
 }
 .is-absolute {
   &-right {
@@ -15,4 +18,10 @@
 }
 .is-route {
   cursor: pointer;
+}
+.is-fullwidth {
+  width: 100% !important;
+}
+.is-fullheight {
+  height: 100% !important;
 }

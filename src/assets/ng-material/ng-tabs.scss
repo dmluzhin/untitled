@@ -1,0 +1,9 @@
+.mat-tab {
+  &-group {
+    &.mat-primary {
+      .mat-ink-bar {
+        background-color: $primary;
+      }
+    }
+  }
+}

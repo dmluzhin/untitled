@@ -1,0 +1,237 @@
+<main class="forms wrapper">
+  <div class="forms-container container">
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="elements/forms#example-form" class="link">Пример формы</a></li>
+        <li class="list-item"><a href="elements/forms#select" class="link">Select (Обычный выбор)</a></li>
+        <li class="list-item"><a href="elements/forms#multiselect" class="link">Multiselect (Множественный выбор)</a></li>
+        <li class="list-item"><a href="elements/forms#checkboxes" class="link">Чекбоксы</a></li>
+        <li class="list-item"><a href="elements/forms#radiobuttons" class="link">Радиобаттоны</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1 class="title">Элемены форм</h1>
+      <div class="subtitle">Классические элементы форм, разработанные как для стандартных форма, так и для опросов</div>
+      <div class="columns">
+        <div class="column">
+          <p class="paragraph">Поддерживаются все стандартные типы форм из нативных HTML-элементов:</p>
+          <ul>
+            <li><code>&lt;form&gt;</code></li>
+            <li><code>&lt;button&gt;</code></li>
+            <li><code>&lt;input&gt;</code></li>
+            <li><code>&lt;textarea&gt;</code></li>
+            <li><code>&lt;label&gt;</code></li>
+          </ul>
+        </div>
+        <div class="column">
+          <p class="paragraph">Для указанных типов форм форм поддерживаются следующие классы:</p>
+          <div class="columns">
+            <div class="column is-paddingless">
+              <ul>
+                <li><code><span class="hljs-symbol">.label</span></code></li>
+                <li><code><span class="hljs-symbol">.input</span></code></li>
+                <li><code><span class="hljs-symbol">.textarea</span></code></li>
+                <li><code><span class="hljs-symbol">.select</span></code></li>
+                <li><code><span class="hljs-symbol">.checkbox</span></code></li>
+              </ul>
+            </div>
+            <div class="column is-paddingless">
+              <ul>
+                <li><code><span class="hljs-symbol">.radio</span></code></li>
+                <li><code><span class="hljs-symbol">.button</span></code></li>
+                <li><code><span class="hljs-symbol">.help</span></code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="paragraph">Для равномерности распределения элементов и их дизайна есть полезный контейнер
+        <code><span class="hljs-symbol">.control</span></code>, в который можно оборачивать элементы управления формой.
+      </p>
+      <p class="paragraph">При объединении нескольких элементов управления в форме, используйте класс
+        <code><span class="hljs-symbol">.field</span></code> в качестве контейнера. Таким образов сохраняется
+        согласованность отступов.</p>
+      <a class="title is-4 is-spaced anchor-title" id="example-form">Пример формы</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <form class="snippet-form">
+            <div class="control">
+              <mat-form-field class="is-fullwidth">
+                <mat-label>Логин</mat-label>
+                <input matInput placeholder="Введите имя">
+              </mat-form-field>
+            </div>
+
+            <div class="control">
+              <mat-form-field class="is-fullwidth">
+                <mat-label>Email</mat-label>
+                <input matInput [formControl]="emailFormControl" placeholder="example@polog.ru">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Пожалуйста, введите корректный Email
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email необходим к заполнению
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="control">
+              <mat-form-field class="is-fullwidth">
+                <mat-label>Оставить комментарий</mat-label>
+                <textarea matInput placeholder="Оставьте комментарий"></textarea>
+              </mat-form-field>
+            </div>
+
+          </form>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="HTML">
+              <pre>
+                <code class="language-html">{{snippetForm}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="TS">
+              <pre>
+                <code class="language-typescript">{{snippetFormTs}}</code>
+              </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="input">Input</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-form-field class="is-fullwidth">
+              <mat-label>Кликните и введите текст, чтобы посмотреть состояния</mat-label>
+              <input matInput placeholder="Введите имя">
+            </mat-form-field>
+          </div>
+          <div class="field">
+            <mat-form-field class="is-fullwidth">
+              <mat-label>Disabled</mat-label>
+              <input matInput placeholder="Disabled" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre><code class="language-html">{{matInput}}</code></pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="select">Select (Обычный выбор)</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-form-field class="is-fullwidth">
+              <mat-label>Любимый герой из Resident Evil</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                  {{hero.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="HTML">
+              <pre>
+                <code class="language-html">{{matSelect}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="TS">
+              <pre>
+                <code class="language-typescript">{{matSelectTS}}</code>
+              </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="multiselect">Multiselect (Множественный выбор)</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-form-field class="is-fullwidth">
+              <mat-label>Любимый герой из Resident Evil</mat-label>
+              <mat-select [formControl]="toppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="HTML">
+              <pre>
+                <code class="language-html">{{matMultiSelect}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="TS">
+              <pre>
+                <code class="language-typescript">{{matMultiSelectTS}}</code>
+              </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="checkboxes">Чекбоксы</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-checkbox class="has-margin-right-30" checked="true" ></mat-checkbox>
+            <mat-checkbox class="has-margin-right-30"></mat-checkbox>
+            <mat-checkbox disabled="true"></mat-checkbox>
+          </div>
+          <div class="field">
+            <mat-checkbox class="" checked="true" >Стандартный отмеченный чекбокс (checked: true)</mat-checkbox>
+          </div>
+          <div class="field">
+            <mat-checkbox class="">Стандартный не отмеченный чекбокс (checked: false)</mat-checkbox>
+          </div>
+          <div class="field">
+            <mat-checkbox disabled="true">Стандартный отключенный чекбокс (disabled)</mat-checkbox>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{matCheckbox}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="radiobuttons">Радиобатоны</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-radio-group>
+              <mat-radio-button class="has-margin-right-30" checked="true" value="1"></mat-radio-button>
+              <mat-radio-button class="has-margin-right-30" value="2"></mat-radio-button>
+              <mat-radio-button disabled="true" value="3"></mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <mat-radio-group>
+            <div class="field">
+              <mat-radio-button class="" checked="true" value="1">Стандартный отмеченный радиобаттон (checked: true)</mat-radio-button>
+            </div>
+            <div class="field">
+              <mat-radio-button class="" value="2">Стандартный не отмеченный радиобаттон (checked: false)</mat-radio-button>
+            </div>
+            <div class="field">
+              <mat-radio-button disabled="true" value="3">Стандартный отключенный радиобаттон (disabled)</mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{matCheckbox}}</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
