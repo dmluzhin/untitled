@@ -1,0 +1,13 @@
+.mat-progress-bar {
+  border-radius: 8px !important;
+  height: 8px !important;
+  max-width: 768px;
+  &-buffer {
+    background-color: $greyLight;
+  }
+  &-fill {
+    &:after {
+      background-color: $primary;
+    }
+  }
+}

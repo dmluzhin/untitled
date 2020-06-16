@@ -12,6 +12,9 @@ import { PagesComponent } from './views/pages/pages.component';
 import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
 import { FormsComponent } from './views/elements/containers/forms/forms.component';
 
+/*КОМПОНЕНТЫ*/
+import { SurveyComponent} from './views/components/containers/survey/survey.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -42,7 +45,11 @@ const routes: Routes = [
   {
     path: 'elements/forms',
     component: FormsComponent
-  }
+  },
+  {
+    path: 'components/survey',
+    component: SurveyComponent
+  },
 ];
 
 @NgModule({

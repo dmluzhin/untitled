@@ -1,0 +1,344 @@
+<main class="survey wrapper">
+  <div class="survey-container container">
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="components/survey#" class="link">???</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1 class="title">Формы опросов</h1>
+      <div class="subtitle">Все виды форм опросов, как step-by-step (плеер), так и стандартные вертикальные формы</div>
+      <a class="title is-4 is-spaced anchor-title" id="types">Блоки слайдера опроса</a>
+      <div class="card">
+        <mat-horizontal-stepper class="survey-stepper" [linear]="isLinear" #stepper>
+          <mat-step [stepControl]="firstFormGroup">
+            <div class="container">
+              <form [formGroup]="firstFormGroup">
+                <div class="survey-start">
+                  <div class="survey-start-header">
+                    <h1 class="title">Владимир Путин объявил следующую неделю нерабочей. Как вы ее проведете?</h1>
+                    <div class="subtitle">25 марта 2020</div>
+                    <div class="survey-description">Владимир Путин объявил о том, что неделя с 30 марта по 5 апреля
+                      будет нерабочей — и пообещал, что всем сохранят зарплату. Мы хотим спросить, как вы планируете
+                      провести эту неделю. Будете сидеть дома? Пойдете гулять в парк? Поедете на шашлыки?
+                    </div>
+                  </div>
+                  <div class="survey-footer">
+                    <button class="button is-primary is-medium is-fullwidth" matStepperNext>Начать опрос</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <div class="container">
+              <div class="progressbar">
+                <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+              </div>
+              <form [formGroup]="secondFormGroup">
+                <div class="survey-step">
+                  <div class="survey-step-progress"></div>
+                  <div class="survey-step-header">
+                    <h3 class="title">1. Расскажите, как вы оцениваете последствия коронавируса?</h3>
+                    <p class="parapraph">От этого наверняка зависит, как вы проведете нерабочую неделю</p>
+                  </div>
+                  <div class="survey-step-body">
+                    <div class="survey-step-checkboxes">
+                      <mat-radio-group>
+                        <div class="field">
+                          <mat-radio-button class="mat-radio-block" value="1">Ничего страшного не произойдет</mat-radio-button>
+                        </div>
+                        <div class="field">
+                          <mat-radio-button class="mat-radio-block" value="2">Это сильно изменит мир</mat-radio-button>
+                        </div>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+                <div class="survey-footer">
+                  <button class="button is-outlined has-padding-left-50 has-padding-right-50" matStepperPrevious>Назад</button>
+                  <button class="button is-primary has-padding-left-50 has-padding-right-50" matStepperNext>Далее</button>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="thirdFormGroup">
+            <div class="container">
+              <div class="progressbar">
+                <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
+              </div>
+              <form [formGroup]="thirdFormGroup">
+                <div class="survey-step">
+                  <div class="survey-step-progress"></div>
+                  <div class="survey-step-header">
+                    <h3 class="title">2. Как вы планируете провести нерабочую неделю?</h3>
+                    <p class="parapraph">От этого наверняка зависит, как вы проведете нерабочую неделю</p>
+                  </div>
+                  <div class="survey-step-body">
+                    <div class="survey-step-checkboxes">
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Дома, карантин все-таки</mat-checkbox>
+                      </div>
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Закуплюсь продуктами и домой</mat-checkbox>
+                      </div>
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Поеду в лес на шашлыки</mat-checkbox>
+                      </div>
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Буду гулять</mat-checkbox>
+                      </div>
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Что угодно - только не сидеть дома</mat-checkbox>
+                      </div>
+                      <div class="field">
+                        <mat-checkbox class="mat-checkbox-block">Все равно буду работать</mat-checkbox>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="survey-footer">
+                  <button class="button is-outlined has-padding-left-50 has-padding-right-50" matStepperPrevious>Назад</button>
+                  <button class="button is-primary has-padding-left-50 has-padding-right-50" matStepperNext>Далее</button>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="fourthFormGroup">
+            <div class="container">
+              <div class="progressbar">
+                <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+              </div>
+              <form [formGroup]="fourthFormGroup">
+                <div class="survey-step">
+                  <div class="survey-step-progress"></div>
+                  <div class="survey-step-header">
+                    <h3 class="title">3. Как вы оцениваете действия правительства в период пандеми?</h3>
+                    <p class="parapraph">Насколько эффективно ведет себя каждое из ведомств?</p>
+                  </div>
+                  <div class="survey-step-body">
+                    <div class="survey-step-matrix">
+
+                      <div class="table-container">
+                        <table class="table table-matrix is-hoverable">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Эффективно</th>
+                              <th>Не вполне эффективно</th>
+                              <th>Не эффективно</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th>Президент РФ</th>
+                              <td data-th="Эффективно">
+                                <mat-radio-button value="1"></mat-radio-button>
+                              </td>
+                              <td data-th="Не вполне эффективно">
+                                <mat-radio-button value="2"></mat-radio-button>
+                              </td>
+                              <td data-th="Не эффективно">
+                                <mat-radio-button value="3"></mat-radio-button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>Правительство РФ</th>
+                              <td data-th="Эффективно">
+                                <mat-radio-button value="1"></mat-radio-button>
+                              </td>
+                              <td data-th="Не вполне эффективно">
+                                <mat-radio-button value="2"></mat-radio-button>
+                              </td>
+                              <td data-th="Не эффективно">
+                                <mat-radio-button value="3"></mat-radio-button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>Местное правительство</th>
+                              <td data-th="Эффективно">
+                                <mat-radio-button value="1"></mat-radio-button>
+                              </td>
+                              <td data-th="Не вполне эффективно">
+                                <mat-radio-button value="2"></mat-radio-button>
+                              </td>
+                              <td data-th="Не эффективно">
+                                <mat-radio-button value="3"></mat-radio-button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="survey-footer">
+                  <button class="button is-outlined has-padding-left-50 has-padding-right-50" matStepperPrevious>Назад</button>
+                  <button class="button is-primary has-padding-left-50 has-padding-right-50" matStepperNext>Далее</button>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="fifthFormGroup">
+            <div class="container">
+              <div class="progressbar">
+                <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+              </div>
+              <form [formGroup]="fifthFormGroup">
+                <div class="survey-step">
+                  <div class="survey-step-progress"></div>
+                  <div class="survey-step-header">
+                    <h3 class="title">4. Как часто и где обычно вы проверяете состояние своего здоровья?</h3>
+                    <p class="parapraph">Это важно в период пандемии</p>
+                  </div>
+                  <div class="survey-step-body">
+                    <div class="survey-step-matrix">
+
+                      <div class="table-container">
+                        <table class="table table-matrix table-matrix-select-type">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Проверяли за последний месяц?</th>
+                              <th>Как часто?</th>
+                              <th>Насколько Вы удовлетворены?</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th>Самостоятельно дома</th>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Проверяли за последний месяц?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Как часто?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Насколько Вы удовлетворены?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>В платной клинике</th>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Любимый герой из Resident Evil</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Проверяли за последний месяц?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Как часто?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>В местной поликлинике</th>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Проверяли за последний месяц?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Как часто?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                              <td>
+                                <mat-form-field class="is-fullwidth">
+                                  <mat-label>Насколько Вы удовлетворены?</mat-label>
+                                  <mat-select>
+                                    <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                                      {{hero.viewValue}}
+                                    </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="survey-footer">
+                  <button class="button is-outlined has-padding-left-50 has-padding-right-50" matStepperPrevious>Назад</button>
+                  <button class="button is-primary has-padding-left-50 has-padding-right-50" matStepperNext>Далее</button>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step>
+            <div class="container">
+              <div class="progressbar">
+                <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+              </div>
+              <div class="survey-finish">
+                <div class="survey-finish-header">
+                  <div class="survey-finish-icon">
+                    <svg class="icon">
+                      <use xlink:href="#fa-circle-with-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <h2 class="title">Спасибо, опрос успешно пройден</h2>
+                </div>
+              </div>
+              <div class="survey-finish-footer">
+                <button class="button is-primary is-medium is-fullwidth" mat-button (click)="stepper.reset()">Пройти опрос заново</button>
+              </div>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </div>
+    </div>
+  </div>
+</main>

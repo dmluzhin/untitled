@@ -17,6 +17,7 @@ import { ButtonsComponent } from './views/elements/containers/buttons/buttons.co
 import { HighlightService } from './highlight.service';
 import { FormsComponent } from './views/elements/containers/forms/forms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SurveyComponent } from './views/components/containers/survey/survey.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ComponentsComponent,
     PagesComponent,
     ButtonsComponent,
-    FormsComponent
+    FormsComponent,
+    SurveyComponent
   ],
   imports: [
     BrowserModule,
