@@ -6,6 +6,7 @@
         <li class="list-item"><a href="elements/forms#select" class="link">Select (Обычный выбор)</a></li>
         <li class="list-item"><a href="elements/forms#multiselect" class="link">Multiselect (Множественный выбор)</a></li>
         <li class="list-item"><a href="elements/forms#checkboxes" class="link">Чекбоксы</a></li>
+        <li class="list-item"><a href="elements/forms#checkboxes" class="link">Блочные чекбоксы</a></li>
         <li class="list-item"><a href="elements/forms#radiobuttons" class="link">Радиобаттоны</a></li>
       </ul>
     </div>
@@ -204,7 +205,27 @@
         </div>
       </div>
 
-      <a class="title is-4 is-spaced anchor-title" id="radiobuttons">Радиобатоны</a>
+      <a class="title is-4 is-spaced anchor-title" id="block-checkboxes">Блочные чекбоксы</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-checkbox class="mat-checkbox-block" checked="true" >Стандартный отмеченный чекбокс (checked: true)</mat-checkbox>
+          </div>
+          <div class="field">
+            <mat-checkbox class="mat-checkbox-block">Стандартный не отмеченный чекбокс (checked: false)</mat-checkbox>
+          </div>
+          <div class="field">
+            <mat-checkbox class="mat-checkbox-block disabled" disabled="true">Стандартный отключенный чекбокс (disabled)</mat-checkbox>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{matCheckboxBlock}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="radiobuttons">Радиобаттоны</a>
       <div class="snippet">
         <div class="snippet-preview">
           <div class="field">
@@ -231,6 +252,89 @@
             <code class="language-html">{{matCheckbox}}</code>
           </pre>
         </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="block-radiobuttons">Блочные радиобаттоны</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="field">
+            <mat-radio-button class="mat-radio-block" checked="true" >Стандартный отмеченный радиобаттон (checked: true)</mat-radio-button>
+          </div>
+          <div class="field">
+            <mat-radio-button class="mat-radio-block">Стандартный не отмеченный радиобаттон (checked: false)</mat-radio-button>
+          </div>
+          <div class="field">
+            <mat-radio-button class="mat-radio-block disabled" disabled="true">Стандартный отключенный радиобаттон (disabled)</mat-radio-button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{matRadioBlock}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="matrix">Матрица (html)</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <mat-radio-group>
+            <div class="table-container">
+              <table class="table table-matrix is-hoverable">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Эффективно</th>
+                    <th>Не вполне эффективно</th>
+                    <th>Не эффективно</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Президент РФ</th>
+                    <td>
+                      <mat-radio-button value="1"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="2"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="3"></mat-radio-button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Правительство РФ</th>
+                    <td>
+                      <mat-radio-button value="1"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="2"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="3"></mat-radio-button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Местное правительство</th>
+                    <td>
+                      <mat-radio-button value="1"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="2"></mat-radio-button>
+                    </td>
+                    <td>
+                      <mat-radio-button value="3"></mat-radio-button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </mat-radio-group>
+        </div>
+        <!--<div class="snippet-code">
+          <pre>
+            <code class="language-html"></code>
+          </pre>
+        </div>-->
       </div>
     </div>
   </div>

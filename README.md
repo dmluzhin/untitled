@@ -26,6 +26,7 @@ webpack                           4.35.2
 # Установка
 
 npm install
+ng add @angular/material
 
 #Запуск
-ng serves
+ng serve

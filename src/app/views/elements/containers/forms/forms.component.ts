@@ -168,6 +168,27 @@ export class SelectMultipleExample {
   <mat-checkbox disabled="true">Стандартный отключенный радиобаттон (disabled)</mat-checkbox>
 </div>
 `;
+  matCheckboxBlock  = `
+<div class="field">
+  <mat-checkbox class="mat-checkbox-block" checked="true" >Стандартный отмеченный чекбокс (checked: true)</mat-checkbox>
+</div>
+<div class="field">
+  <mat-checkbox class="mat-checkbox-block">Стандартный не отмеченный чекбокс (checked: false)</mat-checkbox>
+</div>
+<div class="field">
+  <mat-checkbox class="mat-checkbox-block disabled" disabled="true">Стандартный отключенный чекбокс (disabled)</mat-checkbox>
+</div>`;
+  matRadioBlock = `
+<div class="field">
+    <mat-radio-button class="mat-radio-block" checked="true" >Стандартный отмеченный радиобаттон (checked: true)</mat-radio-button>
+  </div>
+  <div class="field">
+    <mat-radio-button class="mat-radio-block">Стандартный не отмеченный радиобаттон (checked: false)</mat-radio-button>
+  </div>
+  <div class="field">
+    <mat-radio-button class="mat-radio-block disabled" disabled="true">Стандартный отключенный радиобаттон (disabled)</mat-radio-button>
+  </div>
+</div>`;
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

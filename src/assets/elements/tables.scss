@@ -1,0 +1,25 @@
+.content {
+  .table {
+    &-matrix {
+      border-top: $borderBase;
+      border-bottom: $borderBase;
+      thead th {
+        text-align: center;
+        font-size: $fontSizeNormal;
+        color: $fontTeal;
+        font-weight: 500;
+      }
+      thead tr:hover {
+        pointer-events: none;
+      }
+      td, th {
+        padding: .75rem;
+        text-align: center;
+        font-size: $fontSizeNormal;
+        color: $fontTeal;
+        font-weight: 500;
+        border: none;
+      }
+    }
+  }
+}

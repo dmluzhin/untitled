@@ -25,6 +25,15 @@ main {
     height: 100%;
   }
 }
+.side {
+  .list-item {
+    line-height: 1.2;
+    padding: 4px 8px;
+  }
+  .link {
+    font-size: 11px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .wrapper {
     .container {
