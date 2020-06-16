@@ -19,6 +19,69 @@
         color: $fontTeal;
         font-weight: 500;
         border: none;
+        .mat-form-field-infix {
+          border-width: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    .table {
+      &-matrix {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        thead {
+          display: none;
+        }
+        tbody {
+          tr {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: flex-start;
+            &:hover {
+              background-color: transparent !important;
+            }
+          }
+          td {
+            display: flex;
+            flex: 1 1 auto;
+            width: 100%;
+            position: relative;
+            &:after {
+              content: attr(data-th) ": ";
+              display: inline-block;
+              color: $fontTeal;
+              font-size: $fontSizeNormal;
+              margin-left: 32px;
+            }
+            .mat-radio-button {
+              &.mat-radio-checked {
+                .mat-radio-label {
+                  background-color: rgba(200, 215, 230, 0.3);;
+                  border-radius: $radius-rounded;
+                }
+              }
+            }
+            .mat-radio-label {
+              position: absolute;
+              width: 100%;
+              height: 42px;
+              top: 0;
+              left: 0;
+              &:hover {
+                //background-color: $grey;
+              }
+              .mat-radio-container {
+                margin-left: 12px;
+              }
+            }
+          }
+        }
       }
     }
   }

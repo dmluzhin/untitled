@@ -274,8 +274,8 @@
         </div>
       </div>
 
-      <a class="title is-4 is-spaced anchor-title" id="matrix">Матрица (html)</a>
-      <div class="snippet">
+      <a class="title is-4 is-spaced anchor-title" id="matrix">Матрица</a>
+      <div class="snippet snippet-vertical">
         <div class="snippet-preview">
           <mat-radio-group>
             <div class="table-container">
@@ -291,37 +291,37 @@
                 <tbody>
                   <tr>
                     <th>Президент РФ</th>
-                    <td>
+                    <td data-th="Эффективно">
                       <mat-radio-button value="1"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не вполне эффективно">
                       <mat-radio-button value="2"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не эффективно">
                       <mat-radio-button value="3"></mat-radio-button>
                     </td>
                   </tr>
                   <tr>
                     <th>Правительство РФ</th>
-                    <td>
+                    <td data-th="Эффективно">
                       <mat-radio-button value="1"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не вполне эффективно">
                       <mat-radio-button value="2"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не эффективно">
                       <mat-radio-button value="3"></mat-radio-button>
                     </td>
                   </tr>
                   <tr>
                     <th>Местное правительство</th>
-                    <td>
+                    <td data-th="Эффективно">
                       <mat-radio-button value="1"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не вполне эффективно">
                       <mat-radio-button value="2"></mat-radio-button>
                     </td>
-                    <td>
+                    <td data-th="Не эффективно">
                       <mat-radio-button value="3"></mat-radio-button>
                     </td>
                   </tr>
@@ -330,11 +330,131 @@
             </div>
           </mat-radio-group>
         </div>
-        <!--<div class="snippet-code">
+        <div class="snippet-code">
           <pre>
-            <code class="language-html"></code>
+            <code class="language-html">{{matrixHtml}}</code>
           </pre>
-        </div>-->
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="matrix-list">Матрица</a>
+      <div class="snippet snippet-vertical">
+        <div class="snippet-preview">
+          <div class="table-container">
+            <table class="table-matrix">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Проверяли за последний месяц?</th>
+                  <th>Как часто?</th>
+                  <th>Насколько Вы удовлетворены?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Самостоятельно дома</th>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                  <th>В платной клинике</th>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                  <th>В местной поликлинике</th>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Любимый герой из Resident Evil</mat-label>
+                      <mat-select>
+                        <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                          {{hero.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="snippet-code"></div>
       </div>
     </div>
   </div>

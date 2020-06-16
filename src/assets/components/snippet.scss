@@ -28,6 +28,15 @@
   &-form {
     width: 100%;
   }
+  &.snippet-vertical {
+    flex-direction: column;
+    .snippet-preview {
+
+    }
+    .snippet-code {
+      width: 100%;
+    }
+  }
 }
 
 .toolbar {

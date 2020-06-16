@@ -189,6 +189,57 @@ export class SelectMultipleExample {
     <mat-radio-button class="mat-radio-block disabled" disabled="true">Стандартный отключенный радиобаттон (disabled)</mat-radio-button>
   </div>
 </div>`;
+  matrixHtml = `
+<div class="table-container">
+  <table class="table table-matrix is-hoverable">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Эффективно</th>
+        <th>Не вполне эффективно</th>
+        <th>Не эффективно</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Президент РФ</th>
+        <td data-th="Эффективно">
+          <mat-radio-button value="1"></mat-radio-button>
+        </td>
+        <td data-th="Не вполне эффективно">
+          <mat-radio-button value="2"></mat-radio-button>
+        </td>
+        <td data-th="Не эффективно">
+          <mat-radio-button value="3"></mat-radio-button>
+        </td>
+      </tr>
+      <tr>
+        <th>Правительство РФ</th>
+        <td data-th="Эффективно">
+          <mat-radio-button value="1"></mat-radio-button>
+        </td>
+        <td data-th="Не вполне эффективно">
+          <mat-radio-button value="2"></mat-radio-button>
+        </td>
+        <td data-th="Не эффективно">
+          <mat-radio-button value="3"></mat-radio-button>
+        </td>
+      </tr>
+      <tr>
+        <th>Местное правительство</th>
+        <td data-th="Эффективно">
+          <mat-radio-button value="1"></mat-radio-button>
+        </td>
+        <td data-th="Не вполне эффективно">
+          <mat-radio-button value="2"></mat-radio-button>
+        </td>
+        <td data-th="Не эффективно">
+          <mat-radio-button value="3"></mat-radio-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>`;
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -199,6 +250,8 @@ export class SelectMultipleExample {
     {value: 'ada-1', viewValue: 'Ада Вонг'},
     {value: 'claire-2', viewValue: 'Клэр Рэдфилд'}
   ];
+
+
 
   toppings = new FormControl();
   toppingList: string[] = ['Леон Кеннеди', 'Ада Вонг', 'Клэр Рэдфилд', 'Крис Рэдфилд', 'Итан Уинтерс', 'Джилл Валентайн'];
