@@ -240,6 +240,120 @@ export class SelectMultipleExample {
     </tbody>
   </table>
 </div>`;
+  matrixHtmlSelect = `
+<div class="table-container">
+  <table class="table table-matrix table-matrix-select-type">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Проверяли за последний месяц?</th>
+        <th>Как часто?</th>
+        <th>Насколько Вы удовлетворены?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Самостоятельно дома</th>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Проверяли за последний месяц?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Как часто?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Насколько Вы удовлетворены?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>В платной клинике</th>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Любимый герой из Resident Evil</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Проверяли за последний месяц?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Как часто?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>В местной поликлинике</th>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Проверяли за последний месяц?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Как часто?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="is-fullwidth">
+            <mat-label>Насколько Вы удовлетворены?</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let hero of heroes" [value]="hero.value">
+                {{hero.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>`;
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,

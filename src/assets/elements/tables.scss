@@ -53,7 +53,7 @@
             width: 100%;
             position: relative;
             &:after {
-              content: attr(data-th) ": ";
+              content: attr(data-th);
               display: inline-block;
               color: $fontTeal;
               font-size: $fontSizeNormal;
@@ -73,14 +73,16 @@
               height: 42px;
               top: 0;
               left: 0;
-              &:hover {
-                //background-color: $grey;
-              }
               .mat-radio-container {
                 margin-left: 12px;
               }
             }
           }
+        }
+      }
+      &-matrix-select-type {
+        tbody td:after {
+          display: none;
         }
       }
     }
