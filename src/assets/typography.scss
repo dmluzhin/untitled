@@ -98,6 +98,16 @@ a {
 .token.attr-name {
   padding-left: 8px;
 }
+.subtext {
+  font-size: $fontSizeTiny;
+  font-weight: 400;
+  color: $grey;
+  line-height: 16px;
+  letter-spacing: .01em;
+  a, .link {
+    font-size: $fontSizeTiny !important;
+  }
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: .875em;

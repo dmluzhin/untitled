@@ -17,9 +17,30 @@ export class WorkFormsComponent implements OnInit {
     login: new FormControl('', [Validators.required, Validators.required ]),
     password: new FormControl('', [Validators.required, Validators.min(3) ])
   });
+
+  registration: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email ]),
+    login: new FormControl('', [Validators.required, Validators.min(6) ])
+  });
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
   hide = true;
-  get loginInput() { return this.signin.get('login'); }
-  get passwordInput() { return this.signin.get('password'); }
+  get loginInput() {
+    return this.signin.get('login');
+  }
+  get passwordInput() {
+    return this.signin.get('password');
+  }
+  get regLoginInput() {
+    return this.registration.get('login');
+  }
+  get emailInput() {
+    return this.registration.get('email');
+  }
 
   authForm = `
 <div class="auth-form">

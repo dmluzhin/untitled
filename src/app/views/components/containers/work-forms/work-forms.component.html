@@ -3,11 +3,12 @@
     <div class="side">
       <ul class="list">
         <li class="list-item"><a href="components/forms#auth" class="link">Форма авторизации</a></li>
+        <li class="list-item"><a href="components/forms#reg" class="link">Форма регистрации</a></li>
       </ul>
     </div>
     <div class="content">
       <h1 class="title">Стандартные формы</h1>
-      <p class="subtitle">Все виды форм опросов, как step-by-step (плеер), так и стандартные вертикальные формы</p>
+      <p class="subtitle">Формы регистрации, обратной связи и другие</p>
       <a class="title is-4 is-spaced anchor-title has-margin-top-25" id="auth">Форма авторизации</a>
       <div class="snippet">
         <div class="snippet-preview">
@@ -21,12 +22,14 @@
                     </div>
                   </div>
                   <div class="card-content">
+                    <h6 class="title has-margin-bottom-5">Войти</h6>
                     <div class="control">
                       <mat-form-field class="is-fullwidth">
                         <mat-label>Логин</mat-label>
                         <input matInput
                                formControlName="login"
                                placeholder="Введите имя">
+                        <mat-error *ngIf="!loginInput.value">Введите логин</mat-error>
                       </mat-form-field>
                     </div>
                     <div class="control">
@@ -73,6 +76,66 @@
               {{authForm}}
             </code>
           </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="reg">Форма авторизации</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="reg-form">
+                <form class="card-form card" [formGroup]="registration">
+                  <div class="card-form-header">
+                    <div class="card-form-header-logo">
+                      <img src="../../../../../assets/img/svg/polog-logo.svg"/>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h6 class="title has-margin-bottom-5">Регистрация</h6>
+                    <div class="control">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Email</mat-label>
+                        <input matInput [formControl]="emailFormControl" placeholder="example@polog.ru">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                          Пожалуйста, введите корректный Email
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                          Email необходим к заполнению
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="control">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Придумайте логин</mat-label>
+                        <input matInput
+                               formControlName="login"
+                               placeholder="Введите логин"
+                               type="text">
+                        <mat-error *ngIf="!regLoginInput.value">Минимум 6 символов</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="card-form-footer">
+                    <div class="buttons">
+                      <button class="button is-primary is-fullwidth" disabled>Зарегистрироваться</button>
+                    </div>
+                    <div class="card-form-footer-links has-text-left">
+                      <p class="subtext has-margin-bottom-10">Нажимая “Зарегистрироваться”:</p>
+                      <p class="subtext">Я принимаю условия <a class="link">Пользовательского соглашения</a> и даю своё согласие Пологу на обработку моей персональной информации на условиях, определенных
+                        <a class="link">Политикой конфиденциальности</a>.</p>
+                    </div>
+                    <div class="divider">
+                      <span class="divider-text">Уже есть аккаунт?</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="button is-outlined is-fullwidth">Войти</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
