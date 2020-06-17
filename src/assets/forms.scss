@@ -73,7 +73,8 @@ input, textarea {
     position: relative;
   }
 }
-.auth-form, .reg-form {
+.auth-form, .reg-form, .restore-form,
+.socdem-form {
   width: 100%;
   max-width: 420px;
 }

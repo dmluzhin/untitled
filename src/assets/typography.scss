@@ -4,14 +4,21 @@ h1.title {
     padding-bottom: $pdReg !important;
   }
 }
-h1, h2, h3, h4, h5, h6 {
-
+.content {
+  h6 {
+    line-height: 24px;
+  }
 }
 p {
   &.subtitle {
     font-weight: 400;
     line-height: 24px !important;
-
+  }
+  &.paragraph {
+    &.is-normal {
+      font-size: $fontSizeNormal;
+      line-height: 24px;
+    }
   }
 }
 pre {

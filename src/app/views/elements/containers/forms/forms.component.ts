@@ -365,8 +365,6 @@ export class SelectMultipleExample {
     {value: 'claire-2', viewValue: 'Клэр Рэдфилд'}
   ];
 
-
-
   toppings = new FormControl();
   toppingList: string[] = ['Леон Кеннеди', 'Ада Вонг', 'Клэр Рэдфилд', 'Крис Рэдфилд', 'Итан Уинтерс', 'Джилл Валентайн'];
 

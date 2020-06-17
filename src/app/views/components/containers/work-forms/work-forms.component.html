@@ -4,6 +4,7 @@
       <ul class="list">
         <li class="list-item"><a href="components/forms#auth" class="link">Форма авторизации</a></li>
         <li class="list-item"><a href="components/forms#reg" class="link">Форма регистрации</a></li>
+        <li class="list-item"><a href="components/forms#restore" class="link">Форма восстановления пароля</a></li>
       </ul>
     </div>
     <div class="content">
@@ -122,7 +123,8 @@
                     </div>
                     <div class="card-form-footer-links has-text-left">
                       <p class="subtext has-margin-bottom-10">Нажимая “Зарегистрироваться”:</p>
-                      <p class="subtext">Я принимаю условия <a class="link">Пользовательского соглашения</a> и даю своё согласие Пологу на обработку моей персональной информации на условиях, определенных
+                      <p class="subtext">Я принимаю условия <a class="link">Пользовательского соглашения</a> и даю своё
+                        согласие Пологу на обработку моей персональной информации на условиях, определенных
                         <a class="link">Политикой конфиденциальности</a>.</p>
                     </div>
                     <div class="divider">
@@ -136,6 +138,157 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{regForm}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="restore">Форма восстановления пароля</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="restore-form">
+                <form class="card-form card" [formGroup]="restore">
+                  <div class="card-form-header">
+                    <div class="card-form-header-logo">
+                      <img src="../../../../../assets/img/svg/polog-logo.svg"/>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h6 class="title has-margin-bottom-5">Восстановление пароля</h6>
+                    <div class="control">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Email</mat-label>
+                        <input matInput [formControl]="emailRestoreFormControl" placeholder="example@polog.ru">
+                        <mat-error *ngIf="emailRestoreFormControl.hasError('email') && !emailRestoreFormControl.hasError('required')">
+                          Пожалуйста, введите корректный Email
+                        </mat-error>
+                        <mat-error *ngIf="emailRestoreFormControl.hasError('required')">
+                          Email необходим к заполнению
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="card-form-footer">
+                    <div class="buttons">
+                      <button class="button is-primary is-fullwidth" disabled>Получить пароль</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{restoreForm}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="socdem">Форма заполнения соцдемпризнаков</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="socdem-form">
+                <form class="card-form card" [formGroup]="restore">
+                  <div class="card-form-header">
+                    <div class="card-form-header-logo">
+                      <img src="../../../../../assets/img/svg/polog-logo.svg"/>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h6 class="title has-margin-bottom-10">Спасибо за регистрацию. Пароль направлен на указанную почту</h6>
+                    <p class="paragraph is-normal">Чтобы наши опросы были точнее, пожалуйста, заполните форму ниже</p>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Выберите регион</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let region of regions" [value]="region.value">
+                            {{region.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Выберите образование</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let education of educations" [value]="education.value">
+                            {{education.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Выберите образование</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let profession of professions" [value]="profession.value">
+                            {{profession.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Интересы</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let interest of interests" [value]="interest.value">
+                            {{interest.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Пол</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                            {{gender.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Возрастная группа</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let agegroup of agegroups" [value]="agegroup.value">
+                            {{agegroup.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="field is-bottom-marginless">
+                      <mat-form-field class="is-fullwidth">
+                        <mat-label>Возрастная группа</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let fstate of fstates" [value]="fstate.value">
+                            {{fstate.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="buttons">
+                      <button class="button is-primary is-fullwidth" disabled>Сохранить</button>
+                      <button class="button is-outlined is-fullwidth">Заполнить позже</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{socdemForm}}</code>
+          </pre>
         </div>
       </div>
     </div>
