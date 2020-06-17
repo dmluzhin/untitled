@@ -1,0 +1,25 @@
+.card {
+  &-form {
+
+  }
+  &-form-header {
+    display: flex;
+    justify-content: center;
+    padding: $pdLarge;
+    padding-bottom: 0;
+    position: relative;
+  }
+  &-form-header-logo {
+
+  }
+  &-form-footer {
+    padding: $pdLarge;
+    padding-top: 0;
+    &-links {
+      text-align: center;
+      .link {
+        font-size: $fontSizeSmall;
+      }
+    }
+  }
+}

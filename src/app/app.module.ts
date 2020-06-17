@@ -18,6 +18,7 @@ import { HighlightService } from './highlight.service';
 import { FormsComponent } from './views/elements/containers/forms/forms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SurveyComponent } from './views/components/containers/survey/survey.component';
+import { WorkFormsComponent } from './views/components/containers/work-forms/work-forms.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SurveyComponent } from './views/components/containers/survey/survey.com
     PagesComponent,
     ButtonsComponent,
     FormsComponent,
-    SurveyComponent
+    SurveyComponent,
+    WorkFormsComponent
   ],
   imports: [
     BrowserModule,

@@ -17,3 +17,63 @@ input, textarea {
     }
   }
 }
+.forgot {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+  cursor: pointer;
+  font-size: $fontSizeTiny;
+  font-weight: 400;
+}
+.toggle {
+  &-show-more {
+    display: block;
+    position: absolute;
+    height: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: $fontSizeTiny;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.divider {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: $pdMed auto;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 1px;
+    background-color: $borderColor;
+    z-index: 0;
+  }
+  &-text {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: $fontSizeNormal;
+    font-weight: 600;
+    color: $fontTeal;
+    text-align: center;
+    background-color: $white;
+    z-index: 1;
+    padding: 0 $pdMed;
+    position: relative;
+  }
+}
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+}
