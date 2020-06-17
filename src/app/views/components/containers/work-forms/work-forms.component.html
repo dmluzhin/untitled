@@ -5,6 +5,8 @@
         <li class="list-item"><a href="components/forms#auth" class="link">Форма авторизации</a></li>
         <li class="list-item"><a href="components/forms#reg" class="link">Форма регистрации</a></li>
         <li class="list-item"><a href="components/forms#restore" class="link">Форма восстановления пароля</a></li>
+        <li class="list-item"><a href="components/forms#restore" class="link">Форма заполнения соцдемпризнаков</a></li>
+        <li class="list-item"><a href="components/forms#newpass" class="link">Форма смены пароля</a></li>
       </ul>
     </div>
     <div class="content">
@@ -196,7 +198,7 @@
           <div class="columns">
             <div class="column">
               <div class="socdem-form">
-                <form class="card-form card" [formGroup]="restore">
+                <form class="card-form card" [formGroup]="socdem">
                   <div class="card-form-header">
                     <div class="card-form-header-logo">
                       <img src="../../../../../assets/img/svg/polog-logo.svg"/>
@@ -288,6 +290,70 @@
         <div class="snippet-code">
           <pre>
             <code class="language-html">{{socdemForm}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="newpass">Форма смены пароля</a>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="new-pass-form">
+                <form class="card-form card" [formGroup]="newpass">
+                  <div class="card-form-header"></div>
+                  <div class="card-content">
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Старый пароль</mat-label>
+                      <input matInput
+                             formControlName="oldpassword"
+                             placeholder="Старый пароль"
+                             [type]="oldpasswordHide ? 'password' : 'text'">
+                      <div class="reminder">
+                        <span class="toggle-show-more" (click)="oldpasswordHide = !oldpasswordHide">{{oldpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+                      </div>
+                      <mat-error *ngIf="!oldpasswordInput.value">Введите старый пароль</mat-error>
+                      <div class="forgot">
+                        <a class="link">Забыли пароль?</a>
+                      </div>
+                    </mat-form-field>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Новый пароль</mat-label>
+                      <input matInput
+                             formControlName="newpassword"
+                             placeholder="Новый пароль"
+                             [type]="newpasswordHide ? 'password' : 'text'">
+                      <div class="reminder">
+                        <span class="toggle-show-more" (click)="newpasswordHide = !newpasswordHide">{{newpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+                      </div>
+                      <mat-error *ngIf="!newpasswordInput.value">Введите новый пароль</mat-error>
+                      <div class="forgot">
+                        <a class="link">Забыли пароль?</a>
+                      </div>
+                    </mat-form-field>
+                    <mat-form-field class="is-fullwidth">
+                      <mat-label>Повторите пароль</mat-label>
+                      <input matInput
+                             formControlName="repeatpassword"
+                             placeholder="Повторите пароль"
+                             [type]="repeatpasswordHide ? 'password' : 'text'">
+                      <div class="reminder">
+                        <span class="toggle-show-more" (click)="repeatpasswordHide = !repeatpasswordHide">{{repeatpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+                      </div>
+                      <mat-error *ngIf="!repeatpasswordInput.value">Повторите пароль</mat-error>
+                      <div class="forgot">
+                        <a class="link">Забыли пароль?</a>
+                      </div>
+                    </mat-form-field>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{changePassForm}}</code>
           </pre>
         </div>
       </div>

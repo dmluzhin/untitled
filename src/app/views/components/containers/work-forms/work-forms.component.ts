@@ -63,6 +63,16 @@ export class WorkFormsComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email ]),
   });
 
+  socdem: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email ]),
+  });
+
+  newpass: FormGroup = new FormGroup({
+    oldpassword: new FormControl('', [Validators.required, Validators.min(3) ]),
+    newpassword: new FormControl('', [Validators.required, Validators.min(3) ]),
+    repeatpassword: new FormControl('', [Validators.required, Validators.min(3) ]),
+  });
+
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -74,6 +84,9 @@ export class WorkFormsComponent implements OnInit {
   ]);
 
   hide = true;
+  oldpasswordHide = true;
+  newpasswordHide = true;
+  repeatpasswordHide = true;
   get loginInput() {
     return this.signin.get('login');
   }
@@ -85,6 +98,15 @@ export class WorkFormsComponent implements OnInit {
   }
   get emailInput() {
     return this.registration.get('email');
+  }
+  get oldpasswordInput() {
+    return this.newpass.get('oldpassword');
+  }
+  get newpasswordInput() {
+    return this.newpass.get('newpassword');
+  }
+  get repeatpasswordInput() {
+    return this.newpass.get('repeatpassword');
   }
 
   regions: Region[] = [
@@ -359,6 +381,57 @@ export class WorkFormsComponent implements OnInit {
         <button class="button is-primary is-fullwidth" disabled>Сохранить</button>
         <button class="button is-outlined is-fullwidth">Заполнить позже</button>
       </div>
+    </div>
+  </form>
+</div>`;
+
+  changePassForm = `
+<div class="new-pass-form">
+  <form class="card-form card" [formGroup]="newpass">
+    <div class="card-form-header"></div>
+    <div class="card-content">
+      <mat-form-field class="is-fullwidth">
+        <mat-label>Старый пароль</mat-label>
+        <input matInput
+               formControlName="oldpassword"
+               placeholder="Старый пароль"
+               [type]="oldpasswordHide ? 'password' : 'text'">
+        <div class="reminder">
+          <span class="toggle-show-more" (click)="oldpasswordHide = !oldpasswordHide">{{oldpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+        </div>
+        <mat-error *ngIf="!oldpasswordInput.value">Введите старый пароль</mat-error>
+        <div class="forgot">
+          <a class="link">Забыли пароль?</a>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="is-fullwidth">
+        <mat-label>Новый пароль</mat-label>
+        <input matInput
+               formControlName="newpassword"
+               placeholder="Новый пароль"
+               [type]="newpasswordHide ? 'password' : 'text'">
+        <div class="reminder">
+          <span class="toggle-show-more" (click)="newpasswordHide = !newpasswordHide">{{newpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+        </div>
+        <mat-error *ngIf="!newpasswordInput.value">Введите новый пароль</mat-error>
+        <div class="forgot">
+          <a class="link">Забыли пароль?</a>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="is-fullwidth">
+        <mat-label>Повторите пароль</mat-label>
+        <input matInput
+               formControlName="repeatpassword"
+               placeholder="Повторите пароль"
+               [type]="repeatpasswordHide ? 'password' : 'text'">
+        <div class="reminder">
+          <span class="toggle-show-more" (click)="repeatpasswordHide = !repeatpasswordHide">{{repeatpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+        </div>
+        <mat-error *ngIf="!repeatpasswordInput.value">Повторите пароль</mat-error>
+        <div class="forgot">
+          <a class="link">Забыли пароль?</a>
+        </div>
+      </mat-form-field>
     </div>
   </form>
 </div>`;
