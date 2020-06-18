@@ -21,6 +21,7 @@ import { SurveyComponent } from './views/components/containers/survey/survey.com
 import { WorkFormsComponent } from './views/components/containers/work-forms/work-forms.component';
 import { NavComponent} from './views/components/containers/nav/nav.component';
 import { NavModule } from './views/components/containers/nav/nav.module';
+import { ModalsComponent } from './views/elements/containers/modals/modals.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NavModule } from './views/components/containers/nav/nav.module';
     FormsComponent,
     SurveyComponent,
     WorkFormsComponent,
-    NavComponent
+    NavComponent,
+    ModalsComponent
   ],
   imports: [
     BrowserModule,
