@@ -1,0 +1,18 @@
+.nav {
+  &-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &-content.content {
+    max-width: 100%;
+  }
+  .side {
+    width: 160px;
+    padding-left: 24px;
+    .list {
+      position: sticky;
+      top: 24px;
+      right: 0;
+    }
+  }
+}

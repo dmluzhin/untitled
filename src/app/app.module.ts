@@ -19,6 +19,8 @@ import { FormsComponent } from './views/elements/containers/forms/forms.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SurveyComponent } from './views/components/containers/survey/survey.component';
 import { WorkFormsComponent } from './views/components/containers/work-forms/work-forms.component';
+import { NavComponent} from './views/components/containers/nav/nav.component';
+import { NavModule } from './views/components/containers/nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { WorkFormsComponent } from './views/components/containers/work-forms/wor
     ButtonsComponent,
     FormsComponent,
     SurveyComponent,
-    WorkFormsComponent
+    WorkFormsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { WorkFormsComponent } from './views/components/containers/work-forms/wor
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgMaterialModule
+    NgMaterialModule,
+    NavModule
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]

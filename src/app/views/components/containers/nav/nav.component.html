@@ -1,0 +1,42 @@
+<main class="nav wrapper">
+  <div class="nav-container container">
+    <div class="content nav-content">
+      <h1 class="title">Элементы навигации</h1>
+      <div class="subtitle">Header, footer, sidebar, анкоры, вот это все</div>
+      <div class="content">
+        <a class="title is-4 is-spaced anchor-title has-margin-top-25" id="head">Базовый header</a>
+        <p class="paragraph">Базовая верхняя навигация для проекта. Логотип кликабельный и ведет на главную страницу, как и пункт меню "Главная". Каждый пункт меню ведет на соответвтующую страницу, каждую из которых можно простмотреть в разделе <a class="link">Страницы</a>.</p>
+        <p class="paragraph">Кнопка <button class="button is-primary is-outlined is-small">Войти</button> показывается только при условии, что пользователь не зарегистрирован в системе. Зарегистрированный пользователь увидит <span class="tag"><a class="link">граватар</a></span> с инициалами логина, который он ввел при регистрации.</p>
+        <p class="paragraph">При уменьшении или увеличении вьюпорта, header подстраивается под разрешение, это происходит на следующих брейкпоинтах:</p>
+        <ul>
+          <li><code><span class="hljs-symbol">1023px</span></code></li>
+          <li><code><span class="hljs-symbol">768px</span></code></li>
+          <li><code><span class="hljs-symbol">600px</span></code></li>
+        </ul>
+        <div class="subtitle">Изменяйте размер вьюпорта, чтобы увидеть, как header подстраивается под разрешение</div>
+      </div>
+      <div class="snippet snippet-vertical">
+        <div class="snippet-preview">
+          <app-nav-header></app-nav-header>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">
+              {{headerCode}}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="content">
+        <a class="title is-4 is-spaced anchor-title" id="foot">Базовый footer</a>
+        <p class="paragraph">Содержит ссылки и необходимую дополнительную информацию. Такой же адаптивный, как и header</p>
+      </div>
+      <div class="snippet snippet-vertical">
+        <div class="snippet-preview">
+          <app-nav-footer></app-nav-footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

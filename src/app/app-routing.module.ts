@@ -15,6 +15,7 @@ import { FormsComponent } from './views/elements/containers/forms/forms.componen
 /*КОМПОНЕНТЫ*/
 import { SurveyComponent} from './views/components/containers/survey/survey.component';
 import { WorkFormsComponent} from './views/components/containers/work-forms/work-forms.component';
+import { NavComponent } from './views/components/containers/nav/nav.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path: 'components/forms',
     component: WorkFormsComponent
+  },
+  {
+    path: 'components/nav',
+    component: NavComponent
   },
 ];
 
