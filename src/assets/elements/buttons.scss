@@ -171,7 +171,7 @@
        }
      }
 
-    &.is-primary, &.is-orange, &.is-green {
+    &.is-primary, &.is-orange, &.is-green, .is-warning {
       box-shadow: none;
       &:hover, &:active, &:focus, &:disabled, &.disabled {
         background-color: $white !important;
@@ -254,6 +254,36 @@
       &:focus {
         color: $lightOrange;
         border-color: $lightOrange;
+      }
+      &:disabled, &.disabled {
+        opacity: .6;
+        box-shadow: none;
+        color: $grey;
+        border-color: $greyLight;
+        &:hover {
+          border-color: $greyLight;
+          cursor: default;
+          background-color: $white;
+          opacity: .6;
+          box-shadow: none;
+          color: $grey;
+        }
+      }
+    }
+    &.is-warning {
+      color: $lightRed;
+      border-color: $lightRed;
+      &:hover {
+        border-color: $lightRedHover;
+        color: $lightRedHover;
+      }
+      &:active {
+        border-color: darken($lightRedHover, 3%);
+        color: darken($lightRedHover, 3%);
+      }
+      &:focus {
+        color: $lightRed;
+        border-color: $lightRed;
       }
       &:disabled, &.disabled {
         opacity: .6;

@@ -22,7 +22,20 @@ import { WorkFormsComponent } from './views/components/containers/work-forms/wor
 import { NavComponent} from './views/components/containers/nav/nav.component';
 import { NavModule } from './views/components/containers/nav/nav.module';
 import { ModalsComponent } from './views/elements/containers/modals/modals.component';
-import { ModalsModule} from './views/elements/containers/modals/modals.module';
+
+/*modals*/
+import {DefaultModalComponent} from './views/elements/containers/modals/components/default-modal/default-modal.component';
+import { NormalModalComponent } from './views/elements/containers/modals/components/normal-modal/normal-modal.component';
+import { MediumModalComponent } from './views/elements/containers/modals/components/medium-modal/medium-modal.component';
+import { BigModalComponent } from './views/elements/containers/modals/components/big-modal/big-modal.component';
+import { FluidModalComponent } from './views/elements/containers/modals/components/fluid-modal/fluid-modal.component';
+import {
+  PopupsComponent,
+  PrimarySnackComponent,
+  OrangeSnackComponent,
+  GreenSnackComponent,
+  RedSnackComponent
+} from './views/elements/containers/popups/popups.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +53,28 @@ import { ModalsModule} from './views/elements/containers/modals/modals.module';
     SurveyComponent,
     WorkFormsComponent,
     NavComponent,
-    ModalsComponent
+    ModalsComponent,
+    DefaultModalComponent,
+    NormalModalComponent,
+    MediumModalComponent,
+    BigModalComponent,
+    FluidModalComponent,
+    PopupsComponent,
+    PrimarySnackComponent,
+    OrangeSnackComponent,
+    GreenSnackComponent,
+    RedSnackComponent
+  ],
+  entryComponents: [
+    DefaultModalComponent,
+    NormalModalComponent,
+    MediumModalComponent,
+    BigModalComponent,
+    FluidModalComponent,
+    PrimarySnackComponent,
+    OrangeSnackComponent,
+    GreenSnackComponent,
+    RedSnackComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +84,6 @@ import { ModalsModule} from './views/elements/containers/modals/modals.module';
     ReactiveFormsModule,
     NgMaterialModule,
     NavModule,
-    ModalsModule
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]

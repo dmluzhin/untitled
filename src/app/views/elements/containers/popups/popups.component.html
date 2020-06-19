@@ -1,0 +1,35 @@
+<main class="popups wrapper">
+  <div class="popups-container container">
+
+    <div class="content">
+      <h1 class="title">Попапы</h1>
+      <div class="subtitle">Небольшие всплывающие окна, зависящие от положения элемента или угла экрана. И тултипы. Тултипы тоже тут.</div>
+      <a class="title is-4 is-spaced anchor-title" id="input">Снэкбар, или баннер подтверждения.</a>
+      <p class="paragraph">Используется для ненавязчивого оповещения пользователя, что он сделал что-то правильно или неправильно. Делится на 4 типа, по названиям кнопок и цвету ниже:</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button is-outlined is-primary" (click)="openSnackBar()">Успешный снэк</button>
+            <button class="button is-outlined is-orange" (click)="openOrangeSnackBar()">Тревожный снэк</button>
+            <button class="button is-outlined is-green" (click)="openGreenSnackBar()">Подтверждающий снэк</button>
+            <button class="button is-outlined is-warning" (click)="openRedSnackBar()">Опасный снэк</button>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+          <mat-tab label="HTML">
+              <pre>
+                <code class="language-html">{{snackHtml}}</code>
+              </pre>
+          </mat-tab>
+          <mat-tab label="TS">
+              <pre>
+                <code class="language-typescript">{{snackTS}}</code>
+              </pre>
+          </mat-tab>
+        </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

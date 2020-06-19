@@ -1,4 +1,7 @@
 .card {
+  &:not(:last-child) {
+    margin-bottom: $pdLarge;
+  }
   &-form {
 
   }
@@ -21,5 +24,10 @@
         font-size: $fontSizeSmall;
       }
     }
+  }
+  &.card-outlined {
+    box-shadow: none;
+    border-radius: $radius-rounded;
+    border: $borderBase;
   }
 }

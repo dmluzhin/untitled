@@ -11,7 +11,7 @@ import { PagesComponent } from './views/pages/pages.component';
 /*SUBVIEWS*/
 import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
 import { FormsComponent } from './views/elements/containers/forms/forms.component';
-
+import { PopupsComponent} from './views/elements/containers/popups/popups.component';
 /*КОМПОНЕНТЫ*/
 import { SurveyComponent} from './views/components/containers/survey/survey.component';
 import { WorkFormsComponent} from './views/components/containers/work-forms/work-forms.component';
@@ -48,6 +48,10 @@ const routes: Routes = [
   {
     path: 'elements/forms',
     component: FormsComponent
+  },
+  {
+    path: 'elements/popups',
+    component: PopupsComponent
   },
   {
     path: 'elements/modals',

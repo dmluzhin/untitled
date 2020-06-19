@@ -11,3 +11,70 @@
     }
   }
 }
+
+
+.survey-result {
+  &-progress {
+    &.mat-progress-bar {
+      border-radius: $radius-rounded !important;
+      height: 32px !important;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      .mat-progress-bar-buffer {
+        background-color: rbga($greyLight, .2);
+      }
+      .mat-progress-bar-fill:after {
+        background-color: rgba($primary, .2);
+      }
+    }
+  }
+  &-item {
+    position: relative;
+    padding-left: 56px;
+    margin-bottom: $pdSmall;
+    overflow: hidden;
+    &:first-child {
+      .survey-result-percent {
+        font-size: $fontSizeReg + 2px;
+        color: $primary;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-percent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    font-size: $fontSizeReg;
+    color: $fontTeal;
+    font-weight: 500;
+    text-align: left;
+  }
+  &-name {
+    position: absolute;
+    left: 68px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    color: $fontBlack;
+    font-size: $fontSizeNormal;
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

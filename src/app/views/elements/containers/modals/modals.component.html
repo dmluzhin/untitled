@@ -1,14 +1,61 @@
 <main class="modals wrapper">
   <div class="modals-container container">
-    <div class="side">
-      <ul class="list">
-        <li class="list-item"><a href="elements/buttons#types" class="link">Обычная модалка</a></li>
-      </ul>
-    </div>
     <div class="content">
       <h1 class="title">Модальные окна</h1>
       <div class="subtitle">Классическое модальное окно с оверлеем. Адаптивно и можно использовать любой тип контента</div>
-      <button class="button" (click)="openDialog()">Открыть диалоговое окно</button>
+      <p class="paragraph">Модальные окна делятся на 4 типа:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">Стандартное</span></code> - к контейнеру <code><span class="hljs-symbol">.mat-dialog-box</span></code> не добавляется никаких классов. Модалка занимает столько места, сколько занимае контент. Адативно для всех разрешений</li>
+        <li><code><span class="hljs-symbol">.is-normal</span></code> - к контейнеру <code><span class="hljs-symbol">.mat-dialog-box</span></code> добавляется класс <code><span class="hljs-symbol">.is-normal</span></code>. Окно ограничивается по ширине в 400px, адаптивно для всех разрешений.</li>
+        <li><code><span class="hljs-symbol">.is-medium</span></code> - к контейнеру <code><span class="hljs-symbol">.mat-dialog-box</span></code> добавляется класс <code><span class="hljs-symbol">.is-medium</span></code>. Окно ограничивается по ширине в 600px, адаптивно для всех разрешений.</li>
+        <li><code><span class="hljs-symbol">.is-fluid</span></code> - к контейнеру <code><span class="hljs-symbol">.mat-dialog-box</span></code> добавляется класс <code><span class="hljs-symbol">.is-fluid</span></code>. Окно не ограничивается по ширине, старается занять как можно больше пространства. Адаптивно для всех разрешений.</li>
+        <li><code><span class="hljs-symbol">.is-big</span></code> - к контейнеру <code><span class="hljs-symbol">.mat-dialog-box</span></code> добавляется класс <code><span class="hljs-symbol">.is-big</span></code>. Окно ограничивается по ширине в 768px, адаптивно для всех разрешений.</li>
+      </ul>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="buttons">
+                <button class="button is-fullwidth is-outlined" (click)="openDialog()">Открыть стандартное модальное окно</button>
+                <button class="button is-fullwidth is-outlined" (click)="openNormalDialog()">Открыть нормальное модальное окно</button>
+                <button class="button is-fullwidth is-outlined is-primary" (click)="openMediumDialog()">Открыть среднее модальное окно</button>
+                <button class="button is-fullwidth is-outlined" (click)="openBigDialog()">Открыть большое модальное окно</button>
+                <button class="button is-fullwidth is-outlined" (click)="openFluidDialog()">Открыть резиновое модальное окно</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="default-modal">
+              <pre>
+                <code class="language-html">{{defaultModal}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="normal-modal">
+              <pre>
+                <code class="language-html">{{normalModal}}</code>
+              </pre>
+            </mat-tab>
+
+            <mat-tab label="medium-modal">
+              <pre>
+                <code class="language-html">{{mediumModal}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="big-modal">
+              <pre>
+                <code class="language-html">{{bigModal}}</code>
+              </pre>
+            </mat-tab>
+            <mat-tab label="fluid-modal">
+              <pre>
+                <code class="language-html">{{fluidModal}}</code>
+              </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
     </div>
   </div>
 </main>

@@ -1,0 +1,44 @@
+.mat-dialog {
+  &-container {
+    min-width: 300px;
+  }
+  &-box {
+    position: relative;
+    &.is-normal {
+      max-width: 352px;
+    }
+    &.is-medium {
+      max-width: 552px;
+    }
+    &.is-big {
+      max-width: 720px;
+    }
+    &.is-fluid {
+      width: calc(100vw - 48px);
+      max-width: 100%;
+      .content {
+        max-width: 100%;
+      }
+    }
+  }
+  &-close {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    .icon:hover {
+      fill: $fontBlack;
+    }
+  }
+  &-actions {
+    padding-bottom: $pdLarge !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cdk-overlay-pane {
+    max-width: calc(100% - 32px) !important;
+    max-height: calc(100% - 32px) !important;
+  }
+}

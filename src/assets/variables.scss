@@ -25,7 +25,8 @@ $lightGreenHover:         #12E675;
 $green:                   #0EB75C;
 $lightOrange:             #FFA14A;
 $lightOrangeHover:        #FFB672;
-
+$lightRed:                rgba(#E74B3C, .8);
+$lightRedHover:           rgba($lightRed, 1);
 /*BORDERS & RADIUS*/
 $radius-rounded:          4px;
 $borderBase:              1px solid #E5E5E5;

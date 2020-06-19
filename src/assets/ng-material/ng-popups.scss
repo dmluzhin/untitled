@@ -1,0 +1,21 @@
+snack-bar-container {
+  &.is-primary-snack {
+    background-color: $primary;
+    box-shadow: $shadowPrimary;
+    color: $white;
+  }
+  &.is-orange-snack {
+    background-color: $lightOrange;
+    box-shadow: $shadowOrange;
+    color: $white;
+  }
+  &.is-green-snack {
+    background-color: $lightGreen;
+    box-shadow: $shadowGreen;
+    color: $white;
+  }
+  &.is-red-snack {
+    background-color: $lightRed;
+    color: $white;
+  }
+}
