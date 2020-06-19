@@ -22,6 +22,7 @@ import { WorkFormsComponent } from './views/components/containers/work-forms/wor
 import { NavComponent} from './views/components/containers/nav/nav.component';
 import { NavModule } from './views/components/containers/nav/nav.module';
 import { ModalsComponent } from './views/elements/containers/modals/modals.component';
+import { ModalsModule} from './views/elements/containers/modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ModalsComponent } from './views/elements/containers/modals/modals.compo
     FormsModule,
     ReactiveFormsModule,
     NgMaterialModule,
-    NavModule
+    NavModule,
+    ModalsModule
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]
