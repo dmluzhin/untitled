@@ -13,6 +13,7 @@ import {
   MatTabsModule,
   MatStepperModule,
   MatSnackBarModule,
+  MatMenuModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -33,7 +34,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatButtonToggleModule,
     MatTabsModule,
     MatStepperModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -50,7 +52,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatButtonToggleModule,
     MatTabsModule,
     MatStepperModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ]
 })
 

@@ -1,0 +1,55 @@
+.mat-menu {
+  &-header {
+    width: 100%;
+    padding: 0 $pdReg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: $pdReg / 2;
+  }
+  &-header-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: $pdLarge;
+  }
+  &-header-name {
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: $pdSmall;
+    color: $black;
+  }
+  &-header-mail {
+    font-size: $fontSizeSmall;
+    color: $fontTeal;
+  }
+  &-panel {
+    min-width: 280px !important;
+    max-width: 360px !important;
+    padding: $pdReg;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.14) !important;
+  }
+  &-item {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    font-size: $fontSizeNormal;
+    line-height: 24px !important;
+    height: 32px !important;
+    border-radius: $radius-rounded;
+    color: $grey;
+    padding: 0 8px !important;
+    font-weight: 400;
+    .icon {
+      margin-right: $pdReg;
+      opacity: .5;
+    }
+    &:hover {
+      color: $fontBlack;
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,11 +1,20 @@
 <main class="popups wrapper">
   <div class="popups-container container">
-
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="elements/popups#snacks" class="link">Снэкбар</a></li>
+        <li class="list-item"><a href="elements/popups#menu" class="link">Меню</a></li>
+        <li class="list-item"><a href="elements/popups#menu" class="tooltip">Тултип</a></li>
+      </ul>
+    </div>
     <div class="content">
       <h1 class="title">Попапы</h1>
-      <div class="subtitle">Небольшие всплывающие окна, зависящие от положения элемента или угла экрана. И тултипы. Тултипы тоже тут.</div>
-      <a class="title is-4 is-spaced anchor-title" id="input">Снэкбар, или баннер подтверждения.</a>
-      <p class="paragraph">Используется для ненавязчивого оповещения пользователя, что он сделал что-то правильно или неправильно. Делится на 4 типа, по названиям кнопок и цвету ниже:</p>
+      <div class="subtitle">Небольшие всплывающие окна, зависящие от положения элемента или угла экрана. И тултипы.
+        Тултипы тоже тут.
+      </div>
+      <a class="title is-4 is-spaced anchor-title has-margin-top-20" id="snacks">Снэкбар, или баннер подтверждения.</a>
+      <p class="paragraph">Используется для ненавязчивого оповещения пользователя, что он сделал что-то правильно или
+        неправильно. Делится на 4 типа, по названиям кнопок и цвету ниже:</p>
       <div class="snippet">
         <div class="snippet-preview">
           <div class="buttons">
@@ -17,17 +26,164 @@
         </div>
         <div class="snippet-code">
           <mat-tab-group mat-stretch-tabs>
-          <mat-tab label="HTML">
+            <mat-tab label="HTML">
               <pre>
                 <code class="language-html">{{snackHtml}}</code>
               </pre>
-          </mat-tab>
-          <mat-tab label="TS">
+            </mat-tab>
+            <mat-tab label="TS">
               <pre>
                 <code class="language-typescript">{{snackTS}}</code>
               </pre>
-          </mat-tab>
-        </mat-tab-group>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title has-margin-top-20" id="menu">Меню</a>
+      <p class="paragraph">Выпадающее меню. Выпадает в любую сторону. Может содержать иконки, а может и не
+        содержать.</p>
+      <p class="paragraph">Меню умеет подстраиваться под сторону, так что если снизу или сверху будет мало места, то она
+        перестроится на ту сторону, где места будет больше.</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="buttons">
+            <button class="button is-outlined is-primary" mat-button [matMenuTriggerFor]="aboveMenu">Вверх</button>
+            <mat-menu #aboveMenu="matMenu" yPosition="above">
+              <div class="mat-menu-header">
+                <div class="mat-menu-header-icon">
+                  <img ngxGravatar [email]="'example@mail.com'" size="45"/>
+                </div>
+                <div class="mat-menu-header-name">Гарри Поттер</div>
+                <div class="mat-menu-header-mail">gpotter@mail.ru</div>
+              </div>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-person_outline"></use>
+                </svg>
+                Личный кабинет
+              </button>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-settings"></use>
+                </svg>
+                Настройки
+              </button>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-exit_to_app"></use>
+                </svg>
+                Выход
+              </button>
+            </mat-menu>
+            <button class="button is-outlined is-primary" mat-button [matMenuTriggerFor]="afterMenu">Вниз</button>
+            <mat-menu #afterMenu="matMenu" xPosition="after">
+              <div class="mat-menu-header">
+                <div class="mat-menu-header-icon">
+                  <img ngxGravatar [email]="'example@mail.com'" size="45"/>
+                </div>
+                <div class="mat-menu-header-name">Гарри Поттер</div>
+                <div class="mat-menu-header-mail">gpotter@mail.ru</div>
+              </div>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-person_outline"></use>
+                </svg>
+                Личный кабинет
+              </button>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-settings"></use>
+                </svg>
+                Настройки
+              </button>
+              <button mat-menu-item>
+                <svg class="icon icon-large" width="32px" height="32px">
+                  <use xlink:href="#fa-exit_to_app"></use>
+                </svg>
+                Выход
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="Вверх">
+              <pre>
+            <code class="language-html">{{menuHtml1}}</code>
+          </pre>
+            </mat-tab>
+            <mat-tab label="Вниз">
+              <pre>
+            <code class="language-html">{{menuHtml2}}</code>
+          </pre>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="tooltip">Тултипы</a>
+      <p class="paragraph">Высплывающие подсказыки с текстом. Работают как по клику, так и по ховеру. Могут появляться
+        со всех сторон и служат для того, чтобы пояснить человеку, что это за кнопка такая или может содержать текст с
+        определением какого-либо слова.</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <p class="paragraph"><strong>По наведению:</strong></p>
+          <div class="buttons">
+            <button class="button is-outlined" matTooltip="Слева" [matTooltipPosition]="'left'">Слева</button>
+            <button class="button is-outlined" matTooltip="Сверху" [matTooltipPosition]="'above'">Сверху</button>
+            <button class="button is-outlined" matTooltip="Справа" [matTooltipPosition]="'right'">Справа</button>
+            <button class="button is-outlined" matTooltip="Снизу" [matTooltipPosition]="'below'">Снизу</button>
+          </div>
+          <p class="paragraph"><strong>По клику:</strong></p>
+          <div class="">
+            <span
+              class="footnote has-margin-right-5"
+              matTooltip="Слева"
+              #leftTooltip="matTooltip"
+              [matTooltipPosition]="'left'"
+              (click)="leftTooltip.show()">
+              Слева
+            </span>
+            <span
+              class="footnote has-margin-right-5"
+              matTooltip="Сверху"
+              #topTooltip="matTooltip"
+              [matTooltipPosition]="'above'"
+              (click)="topTooltip.toggle()">
+              Сверху
+            </span>
+            <span
+              class="footnote has-margin-right-5"
+              matTooltip="Справа"
+              #rightTooltip="matTooltip"
+              [matTooltipPosition]="'right'"
+              (click)="rightTooltip.toggle()">
+              Справа
+            </span>
+            <span
+              class="footnote has-margin-right-5"
+              matTooltip="Снизу"
+              #bottomTooltip="matTooltip"
+              [matTooltipPosition]="'below'"
+              (click)="bottomTooltip.toggle()">
+              Снизу
+            </span>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="По наведению">
+                <pre>
+                  <code class="language-html">{{tooltipHtml1}}</code>
+                </pre>
+            </mat-tab>
+            <mat-tab label="По клику">
+                <pre>
+                  <code class="language-html">{{tooltipHtml2}}</code>
+                </pre>
+            </mat-tab>
+          </mat-tab-group>
         </div>
       </div>
     </div>

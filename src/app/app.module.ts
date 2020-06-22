@@ -22,6 +22,7 @@ import { WorkFormsComponent } from './views/components/containers/work-forms/wor
 import { NavComponent} from './views/components/containers/nav/nav.component';
 import { NavModule } from './views/components/containers/nav/nav.module';
 import { ModalsComponent } from './views/elements/containers/modals/modals.component';
+import { GravatarModule } from 'ngx-gravatar';
 
 /*modals*/
 import {DefaultModalComponent} from './views/elements/containers/modals/components/default-modal/default-modal.component';
@@ -63,7 +64,7 @@ import {
     PrimarySnackComponent,
     OrangeSnackComponent,
     GreenSnackComponent,
-    RedSnackComponent
+    RedSnackComponent,
   ],
   entryComponents: [
     DefaultModalComponent,
@@ -84,6 +85,7 @@ import {
     ReactiveFormsModule,
     NgMaterialModule,
     NavModule,
+    GravatarModule
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]
