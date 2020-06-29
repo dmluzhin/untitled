@@ -38,6 +38,7 @@ import {
   RedSnackComponent
 } from './views/elements/containers/popups/popups.component';
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
+import { ArticleComponent } from './views/pages/containers/article/article.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { SurveyPageComponent } from './views/pages/containers/survey-page/survey
     GreenSnackComponent,
     RedSnackComponent,
     SurveyPageComponent,
+    ArticleComponent,
   ],
   entryComponents: [
     DefaultModalComponent,
