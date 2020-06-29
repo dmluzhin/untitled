@@ -37,6 +37,7 @@ import {
   GreenSnackComponent,
   RedSnackComponent
 } from './views/elements/containers/popups/popups.component';
+import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import {
     OrangeSnackComponent,
     GreenSnackComponent,
     RedSnackComponent,
+    SurveyPageComponent,
   ],
   entryComponents: [
     DefaultModalComponent,

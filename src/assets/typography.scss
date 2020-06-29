@@ -92,6 +92,13 @@ a {
     text-transform: none;
     background-color: transparent !important;
   }
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
+  &.is-right {
+    text-align: right;
+  }
 }
 .language-html {
   font-size: 12px !important;

@@ -18,6 +18,9 @@ import { WorkFormsComponent} from './views/components/containers/work-forms/work
 import { NavComponent } from './views/components/containers/nav/nav.component';
 import { ModalsComponent} from './views/elements/containers/modals/modals.component';
 
+/*СТРАНИЦЫ*/
+import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -68,6 +71,10 @@ const routes: Routes = [
   {
     path: 'components/nav',
     component: NavComponent
+  },
+  {
+    path: 'pages/survey-page',
+    component: SurveyPageComponent
   },
 ];
 
