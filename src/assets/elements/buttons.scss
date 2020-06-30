@@ -305,3 +305,13 @@
 input.button {
   line-height: 1;
 }
+.loadmore {
+  width: 100%;
+  max-width: 856px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  .button {
+    flex: 1 1 auto;
+  }
+}

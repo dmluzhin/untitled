@@ -94,6 +94,9 @@ a {
   }
   &-group {
     display: flex;
+  }
+  &-group-column {
+    display: flex;
     flex-direction: column;
   }
   &.is-right {

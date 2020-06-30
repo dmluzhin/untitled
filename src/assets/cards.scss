@@ -74,6 +74,14 @@
     border-radius: $radius-rounded;
     border: $borderBase;
   }
+  @media screen and (max-width: 767px) {
+    &-header {
+      padding: $pdMed $pdMed 0 $pdMed;
+    }
+    &-content {
+      padding: $pdMed;
+    }
+  }
 }
 
 .survey-card.card {
@@ -100,6 +108,39 @@
       margin: $pdLarge;
       .buttons .button {
 
+      }
+    }
+  }
+}
+.news-card.card {
+  height: 100%;
+  border-radius: $radius-rounded;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.important-news {
+    border: 2px solid $primary;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: $radius-rounded;
+    text-align: center;
+    &:hover {
+      border-color: lighten($primary, 5%);
+      box-shadow: $shadowPrimary;
+    }
+    .title {
+      font-size: 2.625em;
+    }
+    .paragraph {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &.important-news {
+      .title {
+        font-size: 1.5em;
       }
     }
   }

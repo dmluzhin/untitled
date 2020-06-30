@@ -39,6 +39,7 @@ import {
 } from './views/elements/containers/popups/popups.component';
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 import { ArticleComponent } from './views/pages/containers/article/article.component';
+import { NewsComponent } from './views/pages/containers/news/news.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { ArticleComponent } from './views/pages/containers/article/article.compo
     RedSnackComponent,
     SurveyPageComponent,
     ArticleComponent,
+    NewsComponent,
   ],
   entryComponents: [
     DefaultModalComponent,

@@ -21,6 +21,7 @@ import { ModalsComponent} from './views/elements/containers/modals/modals.compon
 /*СТРАНИЦЫ*/
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 import { ArticleComponent } from './views/pages/containers/article/article.component';
+import { NewsComponent } from './views/pages/containers/news/news.component';
 
 const routes: Routes = [
   {
@@ -76,6 +77,10 @@ const routes: Routes = [
   {
     path: 'pages/survey-page',
     component: SurveyPageComponent
+  },
+  {
+    path: 'pages/news',
+    component: NewsComponent
   },
   {
     path: 'pages/article',
