@@ -30,6 +30,7 @@ import { NormalModalComponent } from './views/elements/containers/modals/compone
 import { MediumModalComponent } from './views/elements/containers/modals/components/medium-modal/medium-modal.component';
 import { BigModalComponent } from './views/elements/containers/modals/components/big-modal/big-modal.component';
 import { FluidModalComponent } from './views/elements/containers/modals/components/fluid-modal/fluid-modal.component';
+import { ChangePassModalComponent } from './views/pages/components/modals/change-pass-modal/change-pass-modal.component';
 import {
   PopupsComponent,
   PrimarySnackComponent,
@@ -40,6 +41,7 @@ import {
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 import { ArticleComponent } from './views/pages/containers/article/article.component';
 import { NewsComponent } from './views/pages/containers/news/news.component';
+import { ProfileComponent } from './views/pages/containers/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { NewsComponent } from './views/pages/containers/news/news.component';
     MediumModalComponent,
     BigModalComponent,
     FluidModalComponent,
+    ChangePassModalComponent,
     PopupsComponent,
     PrimarySnackComponent,
     OrangeSnackComponent,
@@ -71,6 +74,7 @@ import { NewsComponent } from './views/pages/containers/news/news.component';
     SurveyPageComponent,
     ArticleComponent,
     NewsComponent,
+    ProfileComponent,
   ],
   entryComponents: [
     DefaultModalComponent,
@@ -78,6 +82,7 @@ import { NewsComponent } from './views/pages/containers/news/news.component';
     MediumModalComponent,
     BigModalComponent,
     FluidModalComponent,
+    ChangePassModalComponent,
     PrimarySnackComponent,
     OrangeSnackComponent,
     GreenSnackComponent,

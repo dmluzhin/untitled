@@ -1,0 +1,162 @@
+<main class="profile wrapper">
+  <div class="profile-container container">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-3">
+          <div class="profile-card">
+            <div class="profile-gravatar">
+              <img ngxGravatar [email]="'example@mail.com'" size="60"/>
+            </div>
+            <h3 class="profile-username title">BoyWhoLivezz</h3>
+            <div class="profile-id">ID: 12041992</div>
+            <div class="profile-button">
+              <button class="button is-primary is-fullwidth" (click)="openChangePass()">Изменить профиль</button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h1 class="title">Расскажите немного о себе</h1>
+          <form [formGroup]="socdemProfile">
+            <div class="columns">
+              <div class="column is-bottom-paddingless-tablet is-bottom-paddingless-mobile">
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Выберите регион</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let region of regions" [value]="region.value">
+                        {{region.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Выберите образование</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let education of educations" [value]="education.value">
+                        {{education.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Выберите образование</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let profession of professions" [value]="profession.value">
+                        {{profession.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Интересы</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let interest of interests" [value]="interest.value">
+                        {{interest.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="column is-offset-1  is-top-paddingless-tablet is-top-paddingless-mobile">
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Пол</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                        {{gender.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Возрастная группа</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let agegroup of agegroups" [value]="agegroup.value">
+                        {{agegroup.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="field is-bottom-marginless">
+                  <mat-form-field class="is-fullwidth">
+                    <mat-label>Возрастная группа</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let fstate of fstates" [value]="fstate.value">
+                        {{fstate.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-offset-3-desktop">
+          <div class="divider has-margin-bottom-50"></div>
+          <h3 class="title">История пройденных опросов</h3>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-offset-3-desktop">
+          <div class="survey-card card">
+            <div class="card-header">
+              <span class="tag tag-green">Опрос пройден</span>
+              <div class="tag-group tag-group-column">
+                <div class="tag tag-transparent is-right">20 вопросов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+            </div>
+            <div class="card-content-image">
+              <img src="https://fakeimg.pl/320x440/282828/eae0d0/?retina=1"/>
+            </div>
+            <div class="card-footer">
+              <div class="buttons is-flexible is-fullwidth">
+                <button class="button is-green">Результаты</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="survey-card card">
+            <div class="card-header">
+              <span class="tag tag-green">Опрос пройден</span>
+              <div class="tag-group tag-group-column">
+                <div class="tag tag-transparent is-right">20 вопросов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+            </div>
+            <div class="card-content-image">
+              <img src="https://fakeimg.pl/320x440/282828/eae0d0/?retina=1"/>
+            </div>
+            <div class="card-footer">
+              <div class="buttons is-flexible is-fullwidth">
+                <button class="button is-green">Результаты</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-offset-3-desktop">
+          <div class="loadmore">
+            <button class="button is-outlined">Загрузить еще</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,62 @@
+<div class="mat-dialog-box is-normal">
+  <div class="mat-dialog-close" mat-dialog-close>
+    <svg class="icon" width="12px" height="12px">
+      <use xlink:href="#fa-close"></use>
+    </svg>
+  </div>
+  <div class="content">
+    <h4 class="title" mat-dialog-title>Смена пароля</h4>
+    <div mat-dialog-content>
+      <form class="new-pass-form" [formGroup]="newpass">
+        <mat-form-field class="is-fullwidth">
+          <mat-label>Старый пароль</mat-label>
+          <input matInput
+                 formControlName="oldpassword"
+                 placeholder="Старый пароль"
+                 [type]="oldpasswordHide ? 'password' : 'text'">
+          <div class="reminder">
+            <span class="toggle-show-more" (click)="oldpasswordHide = !oldpasswordHide">{{oldpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+          </div>
+          <mat-error *ngIf="!oldpasswordInput.value">Введите старый пароль</mat-error>
+          <div class="forgot">
+            <a class="link">Забыли пароль?</a>
+          </div>
+        </mat-form-field>
+        <mat-form-field class="is-fullwidth">
+          <mat-label>Новый пароль</mat-label>
+          <input matInput
+                 formControlName="newpassword"
+                 placeholder="Новый пароль"
+                 [type]="newpasswordHide ? 'password' : 'text'">
+          <div class="reminder">
+            <span class="toggle-show-more" (click)="newpasswordHide = !newpasswordHide">{{newpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+          </div>
+          <mat-error *ngIf="!newpasswordInput.value">Введите новый пароль</mat-error>
+          <div class="forgot">
+            <a class="link">Забыли пароль?</a>
+          </div>
+        </mat-form-field>
+        <mat-form-field class="is-fullwidth">
+          <mat-label>Повторите пароль</mat-label>
+          <input matInput
+                 formControlName="repeatpassword"
+                 placeholder="Повторите пароль"
+                 [type]="repeatpasswordHide ? 'password' : 'text'">
+          <div class="reminder">
+            <span class="toggle-show-more" (click)="repeatpasswordHide = !repeatpasswordHide">{{repeatpasswordHide ? 'Показать' : 'Скрыть'}}</span>
+          </div>
+          <mat-error *ngIf="!repeatpasswordInput.value">Повторите пароль</mat-error>
+          <div class="forgot">
+            <a class="link">Забыли пароль?</a>
+          </div>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  <mat-dialog-actions align="end">
+    <div class="buttons">
+      <button class="button" mat-button mat-dialog-close mat-dialog-close="false">Закрыть</button>
+      <button class="button is-primary" mat-button mat-dialog-close>Сохранить</button>
+    </div>
+  </mat-dialog-actions>
+</div>

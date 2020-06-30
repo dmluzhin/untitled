@@ -1,0 +1,32 @@
+.profile {
+  &-card {
+    width: 100%;
+    max-width: 200px;
+  }
+  &-gravatar {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: $radius-rounded;
+    background-color: $greyLight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $pdLarge;
+  }
+  &-username {
+
+  }
+  &-id {
+    @extend .subtitle;
+    font-size: $fontSizeNormal;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    &-card {
+      margin: 0 auto;
+    }
+  }
+}

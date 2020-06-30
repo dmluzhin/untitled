@@ -22,6 +22,7 @@ import { ModalsComponent} from './views/elements/containers/modals/modals.compon
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 import { ArticleComponent } from './views/pages/containers/article/article.component';
 import { NewsComponent } from './views/pages/containers/news/news.component';
+import { ProfileComponent} from './views/pages/containers/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -85,6 +86,10 @@ const routes: Routes = [
   {
     path: 'pages/article',
     component: ArticleComponent
+  },
+  {
+    path: 'pages/profile',
+    component: ProfileComponent
   },
 ];
 
