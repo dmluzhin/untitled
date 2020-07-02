@@ -23,6 +23,7 @@ import { SurveyPageComponent } from './views/pages/containers/survey-page/survey
 import { ArticleComponent } from './views/pages/containers/article/article.component';
 import { NewsComponent } from './views/pages/containers/news/news.component';
 import { ProfileComponent} from './views/pages/containers/profile/profile.component';
+import { AboutComponent } from './views/pages/containers/about/about.component';
 
 const routes: Routes = [
   {
@@ -90,6 +91,10 @@ const routes: Routes = [
   {
     path: 'pages/profile',
     component: ProfileComponent
+  },
+  {
+    path: 'pages/about',
+    component: AboutComponent
   },
 ];
 

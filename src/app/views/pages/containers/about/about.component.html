@@ -1,0 +1,152 @@
+<main class="about wrapper">
+  <section class="about-container container">
+    <div class="content">
+      <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="title has-margin-bottom-60">Полог - мощный инструмент для опросов</h1>
+            <p class="subheading has-margin-bottom-40">Популярный инструмент для исследования <br> удовлетворенности пользователей, получения <br> отзывов, маркетингового исследования и другие <br> онлайн опросники и анкеты.</p>
+            <button class="button is-primary is-medium">Пройти опрос</button>
+          </div>
+        </div>
+        <div class="hero-background"></div>
+      </div>
+    </div>
+  </section>
+  <section class="about-info">
+    <div class="container">
+      <div class="content">
+        <h2 class="title is-secondary-text has-margin-bottom-40">Почему Полог именно то, что вам нужно?</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="about-info-card">
+              <div class="about-info-card-icon">
+                <svg class="icon icon-big icon-primary" width="48px" height="48px">
+                  <use xlink:href="#fa-gps_fixed"></use>
+                </svg>
+              </div>
+              <h4 class="about-info-card-title title title-primary">Достигаем поставленных целей</h4>
+              <div class="about-info-catrd-content">
+                <p class="h4 subtitle">Собрать количественные данные Охватить целевую аудиторию <br> Использовать в офисе или вне</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="about-info-card">
+              <div class="about-info-card-icon">
+                <svg class="icon icon-big icon-primary" width="48px" height="48px">
+                  <use xlink:href="#fa-insert_emoticon"></use>
+                </svg>
+              </div>
+              <h4 class="about-info-card-title title title-primary">Удовлетворенность клиентов</h4>
+              <div class="about-info-catrd-content">
+                <p class="h4 subtitle">Узнать, что хотят ваши клиенты <br> Найти клиентов в социальных сетях <br> Понять, что вы делаете верно/неверно</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="about-info-card">
+              <div class="about-info-card-icon">
+                <svg class="icon icon-big icon-primary" width="48px" height="48px">
+                  <use xlink:href="#fa-poll-symbol-on-black-square-with-rounded-corners"></use>
+                </svg>
+              </div>
+              <h4 class="about-info-card-title title title-primary">Образовательный процесс</h4>
+              <div class="about-info-catrd-content">
+                <p class="h4 subtitle">Сделать обучение интересным <br> Отследить прогресс обучения <br> Помочь общению преподавателя и студента</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-demand">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4-desktop is-4-tablet">
+          <div class="h1 title">Узнайте <br> результаты <br> опросов от реальных людей</div>
+          <div class="h3 title">Никаких сомнительных ресурсов, ботов и проплаченных анкет. <br> Только честные ответы.</div>
+        </div>
+        <div class="column is-6-desktop is-6-tablet is-offset-2-desktop is-offset-2-tablet">
+          <div class="content">
+            <div class="card" style="margin-top: -140px;">
+              <div class="card-content">
+                <h4 class="title title-primary">Результат опроса</h4>
+                <p class="subtitle">Краткие результаты опроса о потребительском спросе</p>
+                <div class="card card-outlined">
+                  <div class="card-content">
+                    <h4 class="title">1. Как часто вы покупаете продукты?</h4>
+                    <div class="survey-result">
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress1}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress1"></mat-progress-bar>
+                        <div class="survey-result-name">Часто</div>
+                      </div>
+
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress2}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress2"></mat-progress-bar>
+                        <div class="survey-result-name">Редко</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-outlined">
+                  <div class="card-content">
+                    <h4 class="title">2. Каким образом вы покупаете продукты?</h4>
+                    <div class="survey-result">
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress3}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress3"></mat-progress-bar>
+                        <div class="survey-result-name">Через интернет магазин</div>
+                      </div>
+
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress4}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress4"></mat-progress-bar>
+                        <div class="survey-result-name">В сетевых магазинах оффлайн</div>
+                      </div>
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress5}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress5"></mat-progress-bar>
+                        <div class="survey-result-name">На рынке</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-outlined">
+                  <div class="card-content">
+                    <h4 class="title">1. Как часто вы покупаете продукты?</h4>
+                    <div class="survey-result">
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress6}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress6"></mat-progress-bar>
+                        <div class="survey-result-name">Мясные продукты</div>
+                      </div>
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress7}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress7"></mat-progress-bar>
+                        <div class="survey-result-name">Овощи и фрукты</div>
+                      </div>
+                      <div class="survey-result-item">
+                        <div class="survey-result-percent">{{progress8}}%</div>
+                        <mat-progress-bar class="survey-result-progress" [value]="progress8"></mat-progress-bar>
+                        <div class="survey-result-name">Молочные продукты</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
