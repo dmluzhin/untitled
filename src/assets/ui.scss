@@ -1,0 +1,46 @@
+.filter {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 5px 8px;
+  padding-right: $pdBig + 8px;
+  border-radius: $radius-rounded;
+  background-color: $greyLight;
+  font-size: $fontSizeNormal;
+  color: $primary;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all ease .25s;
+  margin-right: $pdSmall;
+  margin-bottom: $pdSmall;
+  min-height: 28px;
+  vertical-align: top;
+  &:hover {
+    background-color: darken($greyLight, 5%);
+  }
+  &-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: $pdSmall;
+  }
+  &-content {
+    margin-top: 1px;
+  }
+  &-close {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    background-color: $grey;
+    border-radius: 50%;
+    background-image: url("assets/img/svg/close-white.svg");
+    background-size: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}

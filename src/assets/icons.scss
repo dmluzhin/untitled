@@ -3,6 +3,13 @@
   &-primary {
     fill: $primary;
   }
+  &-white {
+    fill: $white;
+  }
+  &-small {
+    width: 18px;
+    height: 18px;
+  }
   &-big {
     width: 48px;
     height: 48px;

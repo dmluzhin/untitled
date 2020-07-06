@@ -112,6 +112,7 @@ a {
   color: $grey !important;
   text-transform: uppercase;
   font-size: $fontSizeTiny;
+  margin-right: $pdSmall;
   &.tag-green {
     background-color: $green !important;
     color: $white !important;
@@ -133,6 +134,9 @@ a {
   }
   &.is-right {
     text-align: right;
+  }
+  &:last-child {
+    margin-right: 0;
   }
 }
 .language-html {

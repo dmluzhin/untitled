@@ -13,7 +13,8 @@ import {
   MatTabsModule,
   MatStepperModule,
   MatSnackBarModule,
-  MatMenuModule
+  MatMenuModule,
+  MatDatepickerModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -35,7 +36,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatTabsModule,
     MatStepperModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -53,7 +55,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatTabsModule,
     MatStepperModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule
   ]
 })
 

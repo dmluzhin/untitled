@@ -1,0 +1,24 @@
+@import "../../../../../assets/variables";
+.results {
+  .content {
+    max-width: 100%;
+  }
+  &-container {
+
+  }
+  &-filter {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $pdLarge;
+    }
+    &-start {
+      flex: 1 1 auto;
+    }
+    &-end {
+      display: flex;
+      justify-content: flex-end;
+      flex: 0 0 auto;
+    }
+  }
+}

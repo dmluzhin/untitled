@@ -52,4 +52,9 @@
       }
     }
   }
+  &-content {
+    .mat-form-field-infix {
+      border-top-width: 12px;
+    }
+  }
 }

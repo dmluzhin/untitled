@@ -1,0 +1,245 @@
+<main class="results wrapper">
+  <div class="results-container container">
+    <div class="content">
+      <h1 class="title">Результаты опросов</h1>
+      <div class="results-filter">
+        <div class="results-filter-row">
+          <div class="results-filter-start">
+            <div class="filter">
+              <div class="filter-icon">
+                <svg class="icon icon-primary icon-small">
+                  <use xlink:href="#fa-pie_chart"></use>
+                </svg>
+              </div>
+              <div class="filter-content">Круглые диаграммы</div>
+              <div class="filter-close"></div>
+            </div>
+            <div class="filter">
+              <div class="filter-icon">
+                <svg class="icon icon-primary icon-small">
+                  <use xlink:href="#fa-calendar_today"></use>
+                </svg>
+              </div>
+              <div class="filter-content">20.04.2020-26.05.2020</div>
+              <div class="filter-close"></div>
+            </div>
+            <div class="filter">
+              <div class="filter-content">Все категории</div>
+              <div class="filter-close"></div>
+            </div>
+          </div>
+          <div class="results-filter-end">
+            <div class="button is-primary" mat-button [matMenuTriggerFor]="aboveMenu">
+              <svg class="icon icon-white icon-small">
+                <use xlink:href="#fa-filter_alt"></use>
+              </svg>
+              <span>Фильтры</span>
+            </div>
+
+            <mat-menu #aboveMenu="matMenu" yPosition="below">
+              <h4 class="title mat-dialog-title is-bottom-marginless">Фильтры результатов</h4>
+              <div class="">
+                <mat-form-field class="is-fullwidth" (click)="$event.stopPropagation()">
+                  <mat-label>Выберите категорию</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let cat of cats" [value]="cat.value">
+                      {{cat.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <!--<div class="">
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Inherited calendar color</mat-label>
+                  <input matInput [matDatepicker]="picker1">
+                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                  <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field color="accent" appearance="fill">
+                  <mat-label>Custom calendar color</mat-label>
+                  <input matInput [matDatepicker]="picker2">
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                </mat-form-field>
+              </div>-->
+              <div class="">
+                <mat-form-field class="is-fullwidth" (click)="$event.stopPropagation()">
+                  <mat-label>Выберите тип</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let barType of barTypes" [value]="barType.value">
+                      {{barType.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="buttons is-right">
+                <button class="button is-bottom-marginless">Сбросить</button>
+                <button class="button is-primary is-bottom-marginless">Применить</button>
+              </div>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="results-card card">
+            <div class="card-header">
+              <div class="tag-group">
+                <div class="tag">Машины</div>
+                <div class="tag tag-green">Опрос пройден</div>
+              </div>
+              <div class="tag-group">
+                <div class="tag tag-transparent">1250 ответов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <div class="chart">
+                <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [colors]="pieChartColors"
+                        [legend]="pieChartLegend">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-card card">
+            <div class="card-header">
+              <div class="tag-group">
+                <div class="tag">Машины</div>
+                <div class="tag tag-green">Опрос пройден</div>
+              </div>
+              <div class="tag-group">
+                <div class="tag tag-transparent">1250 ответов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <div class="chart">
+                <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [colors]="pieChartColors"
+                        [legend]="pieChartLegend">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="results-card card">
+            <div class="card-header">
+              <div class="tag-group">
+                <div class="tag">Машины</div>
+                <div class="tag tag-green">Опрос пройден</div>
+              </div>
+              <div class="tag-group">
+                <div class="tag tag-transparent">1250 ответов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <div class="chart">
+                <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [colors]="pieChartColors"
+                        [legend]="pieChartLegend">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <h2 class="title">Еще результаты опросов</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="survey-card card">
+            <div class="card-header">
+              <span class="tag has-margin-right-5">Опрос</span>
+              <div class="tag-group tag-group-column">
+                <div class="tag tag-transparent is-right">20 вопросов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+            </div>
+            <div class="card-content-image">
+              <img src="https://fakeimg.pl/440x440/282828/eae0d0/?retina=1"/>
+            </div>
+            <div class="card-footer">
+              <div class="buttons is-flexible is-fullwidth">
+                <button class="button is-green">Результаты</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="survey-card card">
+            <div class="card-header">
+              <span class="tag has-margin-right-5">Опрос завершен</span>
+              <div class="tag-group tag-group-column">
+                <div class="tag tag-transparent is-right">20 вопросов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+            </div>
+            <div class="card-content-image">
+              <img src="https://fakeimg.pl/440x320/282828/eae0d0/?retina=1"/>
+            </div>
+            <div class="card-footer">
+              <div class="buttons is-flexible is-fullwidth">
+                <button class="button is-green">Результаты</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="survey-card card">
+            <div class="card-header">
+              <span class="tag tag-green">Опрос пройден</span>
+              <div class="tag-group tag-group-column">
+                <div class="tag tag-transparent is-right">20 вопросов</div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+              <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+            </div>
+            <div class="card-content-image">
+              <img src="https://fakeimg.pl/320x440/282828/eae0d0/?retina=1"/>
+            </div>
+            <div class="card-footer">
+              <div class="buttons is-flexible is-fullwidth">
+                <button class="button is-green">Результаты</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="loadmore">
+            <button class="button is-outlined">Загрузить еще</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

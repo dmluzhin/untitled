@@ -43,6 +43,8 @@ import { ArticleComponent } from './views/pages/containers/article/article.compo
 import { NewsComponent } from './views/pages/containers/news/news.component';
 import { ProfileComponent } from './views/pages/containers/profile/profile.component';
 import { AboutComponent } from './views/pages/containers/about/about.component';
+import { ResultsComponent } from './views/pages/containers/results/results.component';
+import { ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import { AboutComponent } from './views/pages/containers/about/about.component';
     NewsComponent,
     ProfileComponent,
     AboutComponent,
+    ResultsComponent,
   ],
   entryComponents: [
     DefaultModalComponent,
@@ -98,7 +101,8 @@ import { AboutComponent } from './views/pages/containers/about/about.component';
     ReactiveFormsModule,
     NgMaterialModule,
     NavModule,
-    GravatarModule
+    GravatarModule,
+    ChartsModule
   ],
   providers: [HighlightService],
   bootstrap: [AppComponent]

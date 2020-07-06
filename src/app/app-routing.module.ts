@@ -24,6 +24,7 @@ import { ArticleComponent } from './views/pages/containers/article/article.compo
 import { NewsComponent } from './views/pages/containers/news/news.component';
 import { ProfileComponent} from './views/pages/containers/profile/profile.component';
 import { AboutComponent } from './views/pages/containers/about/about.component';
+import { ResultsComponent} from './views/pages/containers/results/results.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,10 @@ const routes: Routes = [
   {
     path: 'pages/profile',
     component: ProfileComponent
+  },
+  {
+    path: 'pages/results',
+    component: ResultsComponent
   },
   {
     path: 'pages/about',
