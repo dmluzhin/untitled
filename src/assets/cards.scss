@@ -1,5 +1,4 @@
 .card {
-  cursor: pointer;
   &:not(:last-child) {
     margin-bottom: $pdLarge;
   }
@@ -83,7 +82,10 @@
     }
   }
 }
-
+a.card {
+  display: block;
+  cursor: pointer;
+}
 .survey-card.card {
   height: 100%;
   position: relative;

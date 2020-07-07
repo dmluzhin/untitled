@@ -10,9 +10,12 @@
         <img src="../../../assets/img/svg/polog-logo.svg"/>
       </div>
     </div>
-    <div class="navbar-start">
+    <div class="navbar-start" [ngClass]="navClasses">
       <div class="navbar-item navbar-search">
         <div class="search-container">
+          <svg class="icon icon-small">
+            <use xlink:href="#fa-search"></use>
+          </svg>
           <input class="search-input" type="text" placeholder="Поиск"/>
         </div>
       </div>

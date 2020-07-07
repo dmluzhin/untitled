@@ -1,0 +1,100 @@
+<main class="survey-result wrapper">
+  <div class="survey-result-container container">
+    <div class="content">
+      <h1 class="title">Результат опроса о потребительском спросе</h1>
+      <div class="card card-outlined">
+        <div class="card-header">
+          <h4 class="title title-primary">Результат опроса</h4>
+        </div>
+        <div class="card-content">
+          <p class="subtitle">Краткие результаты опроса о потребительском спросе</p>
+          <div class="card card-outlined">
+            <div class="card-content">
+              <h4 class="title">1. Как часто вы покупаете продукты?</h4>
+              <div class="survey-result">
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress1}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress1"></mat-progress-bar>
+                  <div class="survey-result-name">Часто</div>
+                </div>
+
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress2}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress2"></mat-progress-bar>
+                  <div class="survey-result-name">Редко</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-outlined">
+            <div class="card-content">
+              <h4 class="title">2. Каким образом вы покупаете продукты?</h4>
+              <div class="survey-result">
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress3}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress3"></mat-progress-bar>
+                  <div class="survey-result-name">Через интернет магазин</div>
+                </div>
+
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress4}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress4"></mat-progress-bar>
+                  <div class="survey-result-name">В сетевых магазинах оффлайн</div>
+                </div>
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress5}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress5"></mat-progress-bar>
+                  <div class="survey-result-name">На рынке</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-outlined">
+            <div class="card-content">
+              <h4 class="title">3. Какие продукты вы предпочитаете покупать?</h4>
+              <div class="survey-result">
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress6}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress6"></mat-progress-bar>
+                  <div class="survey-result-name">Мясные продукты</div>
+                </div>
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress7}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress7"></mat-progress-bar>
+                  <div class="survey-result-name">Овощи и фрукты</div>
+                </div>
+                <div class="survey-result-item">
+                  <div class="survey-result-percent">{{progress8}}%</div>
+                  <mat-progress-bar class="survey-result-progress" [value]="progress8"></mat-progress-bar>
+                  <div class="survey-result-name">Молочные продукты</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="title title-primary">В виде графика</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="card card-outlined">
+            <div class="card-header"></div>
+            <div class="card-content">
+              <div class="chart">
+                <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [colors]="pieChartColors"
+                        [legend]="pieChartLegend" [plugins]="barChartPlugins">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

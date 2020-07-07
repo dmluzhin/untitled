@@ -12,6 +12,7 @@ import { PagesComponent } from './views/pages/pages.component';
 import { ButtonsComponent } from './views/elements/containers/buttons/buttons.component';
 import { FormsComponent } from './views/elements/containers/forms/forms.component';
 import { PopupsComponent} from './views/elements/containers/popups/popups.component';
+import { IconsComponent} from './views/elements/containers/icons/icons.component';
 /*КОМПОНЕНТЫ*/
 import { SurveyComponent} from './views/components/containers/survey/survey.component';
 import { WorkFormsComponent} from './views/components/containers/work-forms/work-forms.component';
@@ -25,6 +26,7 @@ import { NewsComponent } from './views/pages/containers/news/news.component';
 import { ProfileComponent} from './views/pages/containers/profile/profile.component';
 import { AboutComponent } from './views/pages/containers/about/about.component';
 import { ResultsComponent} from './views/pages/containers/results/results.component';
+import { SurveyResultComponent } from './views/pages/containers/survey-result/survey-result.component';
 
 const routes: Routes = [
   {
@@ -66,6 +68,10 @@ const routes: Routes = [
     component: ModalsComponent
   },
   {
+    path: 'elements/icons',
+    component: IconsComponent
+  },
+  {
     path: 'components/survey',
     component: SurveyComponent
   },
@@ -100,6 +106,10 @@ const routes: Routes = [
   {
     path: 'pages/about',
     component: AboutComponent
+  },
+  {
+    path: 'pages/survey-result',
+    component: SurveyResultComponent
   },
 ];
 

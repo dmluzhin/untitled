@@ -1,0 +1,34 @@
+@import "../../../../../assets/variables";
+.icons {
+  &-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .content {
+    max-width: 992px;
+  }
+  .side {
+    width: 160px;
+    padding-left: 24px;
+    .list {
+      position: sticky;
+      top: 24px;
+      right: 0;
+    }
+  }
+  .icon-box {
+    margin-bottom: $pdMed;
+    text-align: center;
+  }
+  .icon-sign {
+    display: block;
+    max-width: 112px;
+    font-size: 10px;
+    font-weight: 500;
+    color: $fontBlack;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+  }
+}

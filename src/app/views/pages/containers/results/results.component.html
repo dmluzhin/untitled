@@ -36,7 +36,7 @@
               <span>Фильтры</span>
             </div>
 
-            <mat-menu #aboveMenu="matMenu" yPosition="below">
+            <mat-menu #aboveMenu="matMenu" yPosition="below" class="has-margin-top-10">
               <h4 class="title mat-dialog-title is-bottom-marginless">Фильтры результатов</h4>
               <div class="">
                 <mat-form-field class="is-fullwidth" (click)="$event.stopPropagation()">
@@ -48,21 +48,21 @@
                   </mat-select>
                 </mat-form-field>
               </div>
-              <!--<div class="">
-                <mat-form-field color="accent" appearance="fill">
-                  <mat-label>Inherited calendar color</mat-label>
+              <div class="field-datepicker" (click)="$event.stopPropagation()">
+                <mat-form-field>
+                  <mat-label>Период от</mat-label>
                   <input matInput [matDatepicker]="picker1">
                   <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                   <mat-datepicker #picker1></mat-datepicker>
                 </mat-form-field>
 
-                <mat-form-field color="accent" appearance="fill">
-                  <mat-label>Custom calendar color</mat-label>
+                <mat-form-field>
+                  <mat-label>Период до</mat-label>
                   <input matInput [matDatepicker]="picker2">
                   <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                   <mat-datepicker #picker2 color="primary"></mat-datepicker>
                 </mat-form-field>
-              </div>-->
+              </div>
               <div class="">
                 <mat-form-field class="is-fullwidth" (click)="$event.stopPropagation()">
                   <mat-label>Выберите тип</mat-label>
@@ -84,7 +84,7 @@
 
       <div class="columns">
         <div class="column is-one-third">
-          <div class="results-card card">
+          <a class="results-card card">
             <div class="card-header">
               <div class="tag-group">
                 <div class="tag">Машины</div>
@@ -107,10 +107,10 @@
                 </canvas>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="column is-one-third">
-          <div class="results-card card">
+          <a class="results-card card">
             <div class="card-header">
               <div class="tag-group">
                 <div class="tag">Машины</div>
@@ -133,10 +133,10 @@
                 </canvas>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="column is-one-third">
-          <div class="results-card card">
+          <a class="results-card card">
             <div class="card-header">
               <div class="tag-group">
                 <div class="tag">Машины</div>
@@ -159,7 +159,7 @@
                 </canvas>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@
       <h2 class="title">Еще результаты опросов</h2>
       <div class="columns">
         <div class="column">
-          <div class="survey-card card">
+          <a class="survey-card card">
             <div class="card-header">
               <span class="tag has-margin-right-5">Опрос</span>
               <div class="tag-group tag-group-column">
@@ -186,10 +186,10 @@
                 <button class="button is-green">Результаты</button>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="column">
-          <div class="survey-card card">
+          <a class="survey-card card">
             <div class="card-header">
               <span class="tag has-margin-right-5">Опрос завершен</span>
               <div class="tag-group tag-group-column">
@@ -208,10 +208,10 @@
                 <button class="button is-green">Результаты</button>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="column">
-          <div class="survey-card card">
+          <a class="survey-card card">
             <div class="card-header">
               <span class="tag tag-green">Опрос пройден</span>
               <div class="tag-group tag-group-column">
@@ -230,7 +230,7 @@
                 <button class="button is-green">Результаты</button>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="columns">

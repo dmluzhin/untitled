@@ -114,6 +114,9 @@
         width: 230px;
         flex: 0 0 auto;
       }
+      &.active {
+        padding-top: 64px;
+      }
     }
     &-search {
       display: none;
@@ -128,6 +131,11 @@
       border-radius: 0;
       border: none;
       padding: 6px;
+    }
+    &-start.active {
+      .navbar-search {
+        display: block;
+      }
     }
   }
 }

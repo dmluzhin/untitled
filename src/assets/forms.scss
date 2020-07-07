@@ -2,6 +2,18 @@ input, textarea {
   font-family: Roboto, Arial, sans-serif;
 }
 .search {
+  &-container {
+    position: relative;
+    .icon {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 12px;
+    }
+  }
   &-input {
     border: transparent;
     font-size: $fontSizeNormal;
@@ -77,4 +89,9 @@ input, textarea {
 .socdem-form, .new-pass-form {
   width: 100%;
   max-width: 420px;
+}
+.field-datepicker {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: nowrap;
 }
