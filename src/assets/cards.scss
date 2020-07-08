@@ -37,6 +37,9 @@
       margin: auto;
     }
   }
+  &-image img {
+    display: block;
+  }
   &-footer {
     padding: $pdSmall;
     height: 52px;

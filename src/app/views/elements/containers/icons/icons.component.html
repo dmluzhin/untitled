@@ -3,7 +3,9 @@
     <div class="side">
       <ul class="list">
         <li class="list-item"><a href="elements/icons#iconography" class="link">Иконки</a></li>
-        <!--<li class="list-item"><a href="elements/icons#howto" class="link">Как ползьзоваться</a></li>-->
+        <li class="list-item"><a href="elements/icons#howto" class="link">Как ползьзоваться</a></li>
+        <li class="list-item"><a href="elements/icons#sizes" class="link">Размеры иконок</a></li>
+        <li class="list-item"><a href="elements/icons#colors" class="link">Цвета иконок</a></li>
       </ul>
     </div>
     <div class="content">
@@ -734,7 +736,249 @@
           </div>
         </div>
       </div>
-      <!--<a class="title is-4 is-spaced anchor-title" id="howto">Как пользоваться</a>-->
+      <a class="title is-4 is-spaced anchor-title" id="howto">Как пользоваться</a>
+      <p class="paragraph">Чтобы использовать иконку, скопируйте приведенный ниже код и замените хэш на нужный.</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <svg class="icon icon-large">
+            <use xlink:href="#fa-search"></use>
+          </svg>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{iconHtml}}</code>
+          </pre>
+        </div>
+      </div>
+      <a class="title is-4 is-spaced anchor-title" id="sizes">Размеры иконок</a>
+      <p class="paragraph">Икноки имеют несколько размеров:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.icon-tiny</span></code> - очень маленькая иконка 12х12px</li>
+        <li><code><span class="hljs-symbol">.icon-small</span></code> - маленькая иконка 18х18px</li>
+        <li><code><span class="hljs-symbol">.icon-reg</span></code> - обычная иконка 24х24px</li>
+        <li><code><span class="hljs-symbol">.icon-large</span></code> - крупная иконка 32x32px</li>
+        <li><code><span class="hljs-symbol">.icon-big</span></code> - большая иконка 48х48px</li>
+      </ul>
+      <p class="paragraph">Добавив нужный класс вы измените размер иконки</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-tiny">
+                      <use xlink:href="#fa-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-tiny</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-small">
+                      <use xlink:href="#fa-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-small</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-reg">
+                      <use xlink:href="#fa-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-reg</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large">
+                      <use xlink:href="#fa-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-large</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-big">
+                      <use xlink:href="#fa-check-symbol"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-big</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{iconSizes}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="colors">Цвета иконок</a>
+      <p class="paragraph">Цвета иконок также определяются классами:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.icon-primary</span></code> - корпоративный цвет</li>
+        <li><code><span class="hljs-symbol">.icon-white</span></code> - белый цвет</li>
+        <li><code><span class="hljs-symbol">.icon-black</span></code> - черный цвет</li>
+        <li><code><span class="hljs-symbol">.icon-grey-light</span></code> - светло-серый цвет</li>
+        <li><code><span class="hljs-symbol">.icon-teal</span></code> - тускло-серый цвет</li>
+        <li><code><span class="hljs-symbol">.icon-dark-blue</span></code> - темно-синий цвет</li>
+        <li><code><span class="hljs-symbol">.icon-green</span></code> - зеленый цвет</li>
+        <li><code><span class="hljs-symbol">.icon-orange</span></code> - оранжевый цвет</li>
+        <li><code><span class="hljs-symbol">.icon-red</span></code> - красный цвет</li>
+      </ul>
+      <p class="paragraph">Добавив один из цветовых классов, вы окрасите иконку в нужный цвет</p>
+
+      <div class="snippet snippet-vertical">
+        <div class="snippet-preview">
+          <div class="columns is-multiline">
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-primary">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-primary</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content" style="background: #31456A">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-white">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign has-text-white">.icon-white</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-black">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-black</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-grey-light">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-grey-light</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-teal">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-teal</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-dark-blue">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-dark-blue</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-green">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-green</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-orange">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-orange</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="card card-outlined">
+                <div class="card-content">
+                  <div class="icon-box">
+                    <svg class="icon icon-large icon-red">
+                      <use xlink:href="#fa-multiline_chart"></use>
+                    </svg>
+                  </div>
+                  <div class="icon-sign">.icon-red</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{iconColors}}</code>
+          </pre>
+        </div>
+      </div>
     </div>
   </div>
 </main>

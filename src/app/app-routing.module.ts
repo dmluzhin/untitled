@@ -18,7 +18,7 @@ import { SurveyComponent} from './views/components/containers/survey/survey.comp
 import { WorkFormsComponent} from './views/components/containers/work-forms/work-forms.component';
 import { NavComponent } from './views/components/containers/nav/nav.component';
 import { ModalsComponent} from './views/elements/containers/modals/modals.component';
-
+import { CardsComponent } from './views/elements/containers/cards/cards.component';
 /*СТРАНИЦЫ*/
 import { SurveyPageComponent } from './views/pages/containers/survey-page/survey-page.component';
 import { ArticleComponent } from './views/pages/containers/article/article.component';
@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'elements/modals',
     component: ModalsComponent
+  },
+  {
+    path: 'elements/cards',
+    component: CardsComponent
   },
   {
     path: 'elements/icons',

@@ -47,6 +47,7 @@ import { ResultsComponent } from './views/pages/containers/results/results.compo
 import { ChartsModule} from 'ng2-charts';
 import { SurveyResultComponent } from './views/pages/containers/survey-result/survey-result.component';
 import { IconsComponent } from './views/elements/containers/icons/icons.component';
+import { CardsComponent } from './views/elements/containers/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { IconsComponent } from './views/elements/containers/icons/icons.componen
     ResultsComponent,
     SurveyResultComponent,
     IconsComponent,
+    CardsComponent,
   ],
   entryComponents: [
     DefaultModalComponent,

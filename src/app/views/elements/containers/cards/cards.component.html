@@ -1,0 +1,141 @@
+<main class="cards wrapper">
+  <div class="cards-container container">
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="elements/cards#card" class="link">Карточка</a></li>
+        <li class="list-item"><a href="elements/cards#has-footer" class="link">С футером</a></li>
+        <li class="list-item"><a href="elements/cards#smaller-card" class="link">Уменьшенная карточка</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1 class="title" id="card">Карточки</h1>
+      <p class="subtitle">Карточки состоят из нескольких элементов, которые вы можете смешивать и сочетать:</p>
+      <ul>
+        <li>
+          <code><span class="hljs-symbol">.card</span></code>: основной контейнер
+          <ul>
+            <li>
+              <code><span class="hljs-symbol">.card-header</span></code> : шапка карточки
+              <ul>
+                <li>
+                  <code><span class="hljs-symbol">.card-header-title</span></code> : прибитый к левой стороне заголовок
+                </li>
+                <li>
+                  <code><span class="hljs-symbol">.card-header-icon</span></code> : место для иконки
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <code><span class="hljs-symbol">.card-content</span></code> : содержит контент карточки
+            </li>
+            <li>
+              <code><span class="hljs-symbol">.card-image</span></code> : адаптивная картинка на всю ширину карточки
+            </li>
+            <li>
+              <code><span class="hljs-symbol">.card-footer</span></code> : футер карточки, так же может содержать кнопки
+              <ul>
+                <li>
+                  <code><span class="hljs-symbol">.card-footer-item</span></code> : стилизованные под карточку кнопки
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="paragraph">Карточка адаптивна и подстроится под ширину родительского контейнера</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-header">
+                  <span class="tag tag-green">Опрос пройден</span>
+                  <div class="tag-group tag-group-column">
+                    <div class="tag tag-transparent is-right">20 вопросов</div>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+                  <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+                </div>
+                <div class="card-image">
+                  <img src="https://fakeimg.pl/1280x960/282828/eae0d0/?retina=1"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre><code class="language-html">{{simpleCard}}</code></pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="has-footer">Карточка с футером</a>
+      <p class="paragraph">Для того чтобы футер карточки отображался корректно, необходимо добавить класс
+        <code><span class="hljs-symbol">.survey-card</span></code> к классу <code><span class="hljs-symbol">.card</span></code>
+        Тогда футер прибьется к низу независимо от высоты карточки и займет 52px высоты</p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="survey-card card">
+                <div class="card-header">
+                  <span class="tag has-margin-right-5">Опрос</span>
+                  <div class="tag-group tag-group-column">
+                    <div class="tag tag-transparent is-right">20 вопросов</div>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+                  <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+                </div>
+                <div class="card-footer">
+                  <div class="buttons is-flexible is-fullwidth">
+                    <button class="button is-primary">Пройти опрос</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre><code class="language-html">{{footerCard}}</code></pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="smaller-card">Уменьшенная карточка</a>
+      <p class="paragraph">Уменьшенная карточка используется для разбавления лейаута. По сути это та же самая карточка, но без картинки и с малым количеством текста.</p>
+      <p class="paragraph">Чтобы активировать стили уменьшенной карточки, добавьте к классу <code><span class="hljs-symbol">.card</span></code> класс <code><span class="hljs-symbol">.type-2</span></code></p>
+      <div class="snippet">
+        <div class="snippet-preview">
+          <div class="columns">
+            <div class="column">
+              <div class="survey-card card type-2">
+                <div class="card-header">
+                  <span class="tag tag-green">Опрос пройден</span>
+                  <div class="tag-group tag-group-column">
+                    <div class="tag tag-transparent is-right">20 вопросов</div>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-header-title">Книги какого жанра вы предпочитаете?</div>
+                  <p class="paragraph">Опрос населения о том, книги какого жанра наиболее популярно</p>
+                </div>
+                <div class="card-footer">
+                  <div class="buttons is-flexible is-fullwidth">
+                    <button class="button is-green">Результаты</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre><code class="language-html">{{type2card}}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
