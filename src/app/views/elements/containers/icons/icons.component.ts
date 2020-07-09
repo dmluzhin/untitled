@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { HighlightService} from '../../../../highlight.service';
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss']
 })
-export class IconsComponent implements OnInit {
+export class IconsComponent implements AfterViewInit {
 
-  blogPost: IconsComponent;
   highlighted: boolean = false;
 
   constructor(private highlightService: HighlightService) { }
 
-  ngOnInit() {
-    if (this.blogPost && !this.highlighted) {
+  ngAfterViewInit() {
+    if (!this.highlighted) {
       this.highlightService.highlightAll();
       this.highlighted = true;
     }

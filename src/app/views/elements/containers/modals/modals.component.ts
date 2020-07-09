@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { HighlightService} from '../../../../highlight.service';
 import { MatDialog } from '@angular/material';
 import { DefaultModalComponent} from './components/default-modal/default-modal.component';
@@ -12,15 +12,14 @@ import {FluidModalComponent} from './components/fluid-modal/fluid-modal.componen
   templateUrl: './modals.component.html',
   styleUrls: ['./modals.component.scss']
 })
-export class ModalsComponent implements OnInit, AfterViewChecked {
+export class ModalsComponent implements OnInit, AfterViewInit {
 
-  blogPost: ModalsComponent;
   highlighted: boolean = false;
 
   constructor(private highlightService: HighlightService, public dialog: MatDialog) { }
 
-  ngAfterViewChecked() {
-    if (this.blogPost && !this.highlighted) {
+  ngAfterViewInit() {
+    if (!this.highlighted) {
       this.highlightService.highlightAll();
       this.highlighted = true;
     }

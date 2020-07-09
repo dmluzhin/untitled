@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked} from '@angular/core';
+import { Component, OnInit, AfterViewInit} from '@angular/core';
 import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { HighlightService } from '../../../../highlight.service';
 
@@ -7,15 +7,15 @@ import { HighlightService } from '../../../../highlight.service';
   templateUrl: './popups.component.html',
   styleUrls: ['./popups.component.scss']
 })
-export class PopupsComponent implements OnInit, AfterViewChecked {
+export class PopupsComponent implements OnInit, AfterViewInit {
 
   blogPost: PopupsComponent;
   highlighted: boolean = false;
 
   constructor(private highlightService: HighlightService, private _snackBar: MatSnackBar) {}
 
-  ngAfterViewChecked() {
-    if (this.blogPost && !this.highlighted) {
+  ngAfterViewInit() {
+    if (!this.highlighted) {
       this.highlightService.highlightAll();
       this.highlighted = true;
     }

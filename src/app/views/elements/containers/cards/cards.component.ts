@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { HighlightService} from '../../../../highlight.service';
 
 @Component({
@@ -6,15 +6,14 @@ import { HighlightService} from '../../../../highlight.service';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent implements AfterViewInit {
 
-  blogPost: CardsComponent;
   highlighted: boolean = false;
 
   constructor(private highlightService: HighlightService) { }
 
-  ngOnInit() {
-    if (this.blogPost && !this.highlighted) {
+  ngAfterViewInit() {
+    if (!this.highlighted) {
       this.highlightService.highlightAll();
       this.highlighted = true;
     }

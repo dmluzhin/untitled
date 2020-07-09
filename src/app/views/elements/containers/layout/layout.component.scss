@@ -1,0 +1,20 @@
+@import "../../../../../assets/variables";
+
+.layout {
+  &-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .content {
+    max-width: 992px;
+  }
+  .side {
+    width: 160px;
+    padding-left: 24px;
+    .list {
+      position: sticky;
+      top: 24px;
+      right: 0;
+    }
+  }
+}

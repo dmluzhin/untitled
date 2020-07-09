@@ -1,0 +1,106 @@
+<main class="layout wrapper">
+  <div class="layout-container container">
+    <div class="side">
+      <ul class="list">
+        <li class="list-item"><a href="elements/layout#container" class="link">Контейнер</a></li>
+        <li class="list-item"><a href="elements/layout#fluid-container" class="link">Резиновый контейнер</a></li>
+        <li class="list-item"><a href="elements/layout#breakpoints" class="link">Контейнеры с брейкпоинтами</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1 class="title">Разметка</h1>
+      <p class="subtitle">Дизайн структуры веб-страницы с помощью CSS</p>
+      <a class="title is-4 is-spaced anchor-title has-margin-top-25" id="container">Контейнер</a>
+      <p class="paragraph">Класс <code><span class="hljs-symbol">.container</span></code> может использоваться в любом контексте, но в основном зависит от родительского блока. Основные блоки, в которм используется <code><span class="hljs-symbol">.container</span></code>:</p>
+      <ul>
+        <li><code><span class="hljs-symbol">.navbar</span></code> </li>
+        <li><code><span class="hljs-symbol">.hero</span></code> </li>
+        <li><code><span class="hljs-symbol">.section</span></code> </li>
+        <li><code><span class="hljs-symbol">.footer</span></code> </li>
+      </ul>
+      <p class="paragraph">Ширина контейнера для каждого брейкпоинта равна <code><span class="hljs-symbol">$device - (2 * $gap)</span></code>. Переменная
+        <code><span class="hljs-symbol">$gap</span></code> имеет стандартное значение в <code><span class="hljs-symbol">32px</span></code>, но может быть изменено.</p>
+      <p class="paragraph">Вот как будет вести себя контейнер при разных разрешениях:</p>
+      <ul>
+        <li>При разрешении <code><span class="hljs-symbol">$desktop</span></code> размер контейнера составит максимум 960px</li>
+        <li>При разрешении <code><span class="hljs-symbol">$widescreen</span></code> размер контейнера составит максимум 1152px</li>
+        <li>При разрешении <code><span class="hljs-symbol">$fillhd</span></code> размер контейнера составит макмимум 1344px</li>
+      </ul>
+
+      <div class="snippet snippet-vertical">
+        <div class="snippet-preview">
+          <div class="container">
+            <div class="notification">
+              Здесь есть контейнер <strong>центрированный</strong> на разрешении <code><span class="hljs-symbol">$desktop</span></code>.
+            </div>
+          </div>
+        </div>
+        <div class="snippet-code">
+          <pre>
+            <code class="language-html">{{container}}</code>
+          </pre>
+        </div>
+      </div>
+
+      <a class="title is-4 is-spaced anchor-title" id="fluid-container">Резиновый контейнер</a>
+      <p class="paragraph">Если не хотите, чтобы контейнер ограничивался максимальной шириной, зависимой от разрешения, но хотите оставить паддинги в <code><span class="hljs-symbol">32px</span></code> слева и справа, используйте класс <code><span class="hljs-symbol">.is-fluid</span></code>:</p>
+    </div>
+  </div>
+  <section class="is-fullwidth  has-margin-top-25 has-margin-bottom-25">
+    <div class="snippet snippet-vertical">
+      <div class="snippet-preview">
+        <div class="container is-fluid">
+          <div class="notification">
+            Это резиновый контейнер с сохранением паддингов в 32 пикселя
+          </div>
+        </div>
+      </div>
+      <div class="container is-fullwidth">
+        <div class="snippet-code">
+          <pre><code class="language-html">{{fluidContainer}}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <a class="title is-4 is-spaced anchor-title" id="breakpoints">Контейнеры с брейкпоинтами</a>
+      <p class="paragraph">С двумя модификаторами <code><span class="hljs-symbol">.is-widescreen</span></code> и <code><span class="hljs-symbol">.is-fullhd</span></code>, можно отображать полноразмерный контейнер до этих конкретных брейкпоинтов.</p>
+
+    </div>
+  </div>
+  <section class="is-fullwidth  has-margin-top-25 has-margin-bottom-25">
+    <div class="snippet snippet-vertical">
+      <div class="snippet-preview">
+        <div class="container is-widescreen">
+          <div class="notification">
+           Этот контейнер занимает всю ширину родительского блока до брейкпоинта <code><span class="hljs-symbol">$widescreen</span></code>.
+          </div>
+        </div>
+      </div>
+      <div class="container is-fullwidth">
+        <div class="snippet-code">
+          <pre><code class="language-html">{{widescreenContainer}}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="is-fullwidth  has-margin-top-25 has-margin-bottom-25">
+    <div class="snippet snippet-vertical">
+      <div class="snippet-preview">
+        <div class="container is-fullhd">
+          <div class="notification">
+            Этот контейнер занимает всю ширину родительского блока до брейкпоинта <code><span class="hljs-symbol">$fullscreen</span></code>.
+          </div>
+        </div>
+      </div>
+      <div class="container is-fullwidth">
+        <div class="snippet-code">
+          <pre><code class="language-html">{{fluidContainer}}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

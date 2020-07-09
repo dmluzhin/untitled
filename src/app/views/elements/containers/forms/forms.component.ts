@@ -1,4 +1,4 @@
-import {Component, AfterViewChecked} from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { HighlightService} from '../../../../highlight.service';
 
@@ -12,15 +12,14 @@ interface Hero {
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss']
 })
-export class FormsComponent implements AfterViewChecked {
+export class FormsComponent implements AfterViewInit {
 
-  blogPost: FormsComponent;
   highlighted: boolean = false;
 
   constructor(private highlightService: HighlightService) { }
 
-  ngAfterViewChecked() {
-    if (this.blogPost && !this.highlighted) {
+  ngAfterViewInit() {
+    if (!this.highlighted) {
       this.highlightService.highlightAll();
       this.highlighted = true;
     }
