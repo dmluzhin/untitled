@@ -58,8 +58,8 @@
     padding-bottom: 0;
     position: relative;
   }
-  &-form-header-logo {
-
+  &-form-header-logo img {
+    max-width: 180px;
   }
   &-form-footer {
     padding: $pdLarge;
